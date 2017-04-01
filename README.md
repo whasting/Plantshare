@@ -36,7 +36,14 @@ Superbonus:
 
 ## Technologies & Technical Challenges
 
-django
+Plantshare will be using Django on the backend and React/Redux on the frontend.
+
+The main technical challenges will be learning how to integrate Django with
+Redux, and learning Python.
+
+Also the site will be using a combination of Google Maps Api to display the
+location of plant distribution and Cloudinary image storage to allow
+users to upload images of their plants.
 
 ## Group Members & Work Breakdown
 
