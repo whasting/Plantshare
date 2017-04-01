@@ -45,6 +45,10 @@ django
 
 #### [Colin Ritchey](https://github.com/colinritchey)
   - frontend setup
+    - Redux setup
+    - React Components development
+    - CSS styling
+  - reviewing pull requests
 
 #### [Wade Hastings](https://github.com/whasting)
   - fullstack
@@ -57,16 +61,33 @@ django
 
 - Setup backend skeleton (Eddie)
 - Setup frontend skeleton (Colin)
-- Research bugs, review pull requests
-**Objective:**
+- Assist backend setup (Wade)
 
 ### Day 2:
 
+- Backend: render an index of plants with basic information into JSON. (Eddie)
+- Frontend: Create the Plant Index Container and plant index items (Colin)
+- Research and implement Google Maps API (Wade & Colin)
+
 ### Day 3:
+
+- Backend: Filter index implementation and Tags/Taggings Tables(Eddie)
+- Frontend: Show page for a single plant (Colin)
+- Assist in Backend filer, image hosting on Cloudinary (Wade)
+- Searchbar within the navbar (Eddie & Wade)
 
 ### Day 4:
 
+- Backend: Filter by user (Eddie)
+- Frontend: User dashboard (Colin)
+- Get started on CRUD functionality (Wade & Eddie)
+
 ### Day 5:
+
+- Backend checks for CRUD (Eddie)
+- Frontend CRUD (Colin)
+- Review and Assist (Wade)
+
 
 ### Bonus Features (TBD)
 
