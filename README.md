@@ -40,9 +40,16 @@ django
 
 ## Group Members & Work Breakdown
 
-- [Eddie Lao](https://github.com/eddielao)
-- [Colin Ritchey](https://github.com/colinritchey)
-- [Wade Hastings](https://github.com/whasting)
+#### [Eddie Lao](https://github.com/eddielao)
+  - backend setup
+
+#### [Colin Ritchey](https://github.com/colinritchey)
+  - frontend setup
+
+#### [Wade Hastings](https://github.com/whasting)
+  - fullstack
+  - review pull requests
+  - research bugs and ensure smooth
 
 ## Development Timeline
 
