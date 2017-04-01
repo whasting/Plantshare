@@ -14,7 +14,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 title       | string    | not null
 description | text      | not null
-instructions| text      | not null, foreign key (references notebooks), indexed
+instructions| text      | not null
 owner_id    | integer   | not null, foreign key (references users), indexed
 lng         | float     | not null
 lat         | float     | not null
