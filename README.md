@@ -58,9 +58,8 @@ users to upload images of their plants.
   - reviewing pull requests
 
 #### [Wade Hastings](https://github.com/whasting)
-  - fullstack
-  - review pull requests
-  - research bugs and ensure smooth
+  - Fullstack
+  - Bug Support
 
 ## Development Timeline
 
