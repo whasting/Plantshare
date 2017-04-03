@@ -2,24 +2,29 @@
 
 [Live][heroku]
 
-## Minimum Viable Product
-Plantshare is a web application built using Django on the backend
-and React/Redux on the frontend. Here are the MVPs:
+[heroku]:(https://github.com/whasting/Plantshare)
 
-1. Hosting on Heroku
+## Minimum Viable Product
+Plantshare is a mobile application built using Django on the backend and React Native on the frontend. Here are the MVPs:
+
+1. Emulator for Demonstration
 2. Production README
 3. New account creation, login, and guest/demo login
 4. Users can view listings (plants)
 5. Use Google Map API to show listings based on location
 6. Taggings
 7. Users can CRUD listings via their dashboard
+8. Users can 'claim' listings that they want
+9. Posters can approve claims, reducing the number of
+available items in the listing
 
 Bonus:
 - Multiple locations
 - User profiles
 
 Superbonus:
-- Mobile app
+- Direct Messaging
+- Web App
 
 ## Design Docs
 * [View Wireframes][wireframes]
@@ -36,21 +41,20 @@ Superbonus:
 
 ## Technologies & Technical Challenges
 
-Plantshare will be using Django on the backend and React/Redux on the frontend.
+Plantshare will be using Rails on the backend and React/Redux on the frontend.
 
-The main technical challenges will be learning how to integrate Django with
-Redux, and learning Python.
+The main technical challenges will be learning React Native.
 
-Also the site will be using a combination of Google Maps Api to display the
-location of plant distribution and Cloudinary image storage to allow
+Additionally, the site will be using a combination of Google Maps Api to display the location of a plant detail item and Cloudinary image storage to allow
 users to upload images of their plants.
 
 ## Group Members & Work Breakdown
 
 #### [Eddie Lao](https://github.com/eddielao)
-  - backend setup
+  -
 
 #### [Colin Ritchey](https://github.com/colinritchey)
+  - backend setup
   - frontend setup
     - Redux setup
     - React Components development
@@ -58,21 +62,20 @@ users to upload images of their plants.
   - reviewing pull requests
 
 #### [Wade Hastings](https://github.com/whasting)
-  - Fullstack
+  - backend setup
+
   - Bug Support
 
 ## Development Timeline
 
 ### Day 1: Backend and frontend setup
 
-- Setup backend skeleton (Eddie)
-- Setup frontend skeleton (Colin)
-- Assist backend setup (Wade)
+- Entire backend with Django (Wade, Colin, Eddie)
+- Authentication/Full React
 
 ### Day 2:
 
-- Backend: render an index of plants with basic information into JSON. (Eddie)
-- Frontend: Create the Plant Index Container and plant index items (Colin)
+- Plant table setup
 - Research and implement Google Maps API (Wade & Colin)
 
 ### Day 3:
@@ -96,8 +99,3 @@ users to upload images of their plants.
 
 
 ### Bonus Features (TBD)
-
-- [ ] Connect Google Maps API
-- [ ] Get weather for ski resorts via API
-- [ ] Get rating for ski resorts via API
-- [ ] Event suggestions based on event details and user profiles
