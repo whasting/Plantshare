@@ -5,21 +5,22 @@
 [heroku]:(https://github.com/whasting/Plantshare)
 
 ## Minimum Viable Product
-Plantshare is a mobile application built using Django on the backend and React Native on the frontend. Here are the MVPs:
+Plantshare is a mobile application built using Rails on the backend and React Native on the frontend. Here are the MVPs:
 
 1. Emulator for Demonstration
 2. Production README
 3. New account creation, login, and guest/demo login
 4. Users can view listings (plants)
-5. Use Google Map API to show listings based on location
-6. Taggings
-7. Users can CRUD listings via their dashboard
-8. Users can 'claim' listings that they want
-9. Posters can approve claims, reducing the number of
+5. Use Google Map API to show listing detail location
+6. Users can CRUD listings via their dashboard
+7. Users can 'claim' listings that they want
+8. Posters can approve claims, reducing the number of
 available items in the listing
 
 Bonus:
-- Multiple locations
+- Search
+- Taggings
+- Multiple cities
 - User profiles
 
 Superbonus:
@@ -41,61 +42,72 @@ Superbonus:
 
 ## Technologies & Technical Challenges
 
-Plantshare will be using Rails on the backend and React/Redux on the frontend.
+Plantshare will be using Rails on the backend and React Native on the frontend.
 
-The main technical challenges will be learning React Native.
+The main technical challenge will be learning React Native.
 
-Additionally, the site will be using a combination of Google Maps Api to display the location of a plant detail item and Cloudinary image storage to allow
-users to upload images of their plants.
+Additionally, the site will be using a combination of Google Maps Api to display the location of a plant detail item and Cloudinary image storage Api to allow users to upload images of their plants.
 
-## Group Members & Work Breakdown
+## Group Members
 
 #### [Eddie Lao](https://github.com/eddielao)
-  -
 
 #### [Colin Ritchey](https://github.com/colinritchey)
-  - backend setup
-  - frontend setup
-    - Redux setup
-    - React Components development
-    - CSS styling
-  - reviewing pull requests
 
 #### [Wade Hastings](https://github.com/whasting)
-  - backend setup
-
-  - Bug Support
 
 ## Development Timeline
 
-### Day 1: Backend and frontend setup
+### Day 1: Backend and Frontend Setup
 
-- Entire backend with Django (Wade, Colin, Eddie)
-- Authentication/Full React
+- Entire backend (Wade, Eddie)
+- Authentication/Full React (Colin, Wade)
+- Splash (Team)
 
-### Day 2:
+### Day 2: Index Day
 
-- Plant table setup
-- Research and implement Google Maps API (Wade & Colin)
+#### Dashboard
+- PlantIndexContainer (Colin)
+  - PlantIndex (Eddie)
+    - PlantIndexItem (Wade)
 
-### Day 3:
+#### Maps Api
 
-- Backend: Filter index implementation and Tags/Taggings Tables(Eddie)
-- Frontend: Show page for a single plant (Colin)
-- Assist in Backend filer, image hosting on Cloudinary (Wade)
-- Searchbar within the navbar (Eddie & Wade)
+- Research Google Maps Api (Wade)
 
-### Day 4:
+### Day 3: Show Page
 
-- Backend: Filter by user (Eddie)
-- Frontend: User dashboard (Colin)
-- Get started on CRUD functionality (Wade & Eddie)
+#### Plant Show Page
+- PlantDetailContainer (Colin)
+  - PlantDetail (Colin)
+  - GoogleMap (Wade)
 
-### Day 5:
+#### PlantRequest
+- Create plant request interface (Eddie)
 
-- Backend checks for CRUD (Eddie)
-- Frontend CRUD (Colin)
-- Review and Assist (Wade)
+#### Dashboard - PlantRequest Approval
+- Create poster pending, approve, deny interface (Team)
 
+#### Cloudinary
+- Research Cloudinary Api (Eddie)
 
-### Bonus Features (TBD)
+### Day 4: Create, Edit, and Destroy
+
+#### Create Page
+- PlantListingForm (Eddie)
+- Hook up user image uploads using Cloudinary (Eddie)
+
+#### Edit/Delete Page
+- PlantListingForm (Wade)
+
+### Bonus Features
+
+- [ ] Search
+- [ ] Taggings
+- [ ] Multiple cities
+- [ ] User profiles
+
+### Super Bonus
+
+- [ ] Direct Messaging
+- [ ] Web App
