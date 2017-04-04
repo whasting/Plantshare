@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  instructions: MyText
+  owner_id: 1
+  lng: 1.5
+  lat: 1.5
+  img_url: MyString
+  start_time: 2017-04-04 09:36:40
+  end_time: 2017-04-04 09:36:40
+
+two:
+  title: MyString
+  description: MyText
+  instructions: MyText
+  owner_id: 1
+  lng: 1.5
+  lat: 1.5
+  img_url: MyString
+  start_time: 2017-04-04 09:36:40
+  end_time: 2017-04-04 09:36:40
