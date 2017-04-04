@@ -9,3 +9,12 @@
 User.destroy_all
 
 u1 = User.create!(username: "demo", password: "password")
+
+Plant.destroy_all
+
+p1 = Plant.create!(
+  title: "Aeonium Arboreum",
+  description: "20 cuttings available of this beautiful treelike succulent",
+  instructions: "Water once weekly during late-spring/summer, water monthly in winter",
+  owner_id: u1.id
+)
