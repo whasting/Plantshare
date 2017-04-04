@@ -3,6 +3,7 @@ class CreateRequests < ActiveRecord::Migration[5.0]
     create_table :requests do |t|
       t.integer :user_id, null: false
       t.integer :plant_id, null: false
+      t.text :comment
 
       t.timestamps
     end

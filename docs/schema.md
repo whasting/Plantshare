@@ -22,12 +22,14 @@ img_url     | text      |
 start_time  | time      |
 end_time    | time      |
 
+
 ## requests
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 user_id     | integer   | not null, foreign key
 plant_id    | integer   | not null, foreign key
+comment     | text      |
 
 ## tags
 column name | data type | details

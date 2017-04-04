@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20170404163845) do
   create_table "requests", force: :cascade do |t|
     t.integer  "user_id",    null: false
     t.integer  "plant_id",   null: false
+    t.text     "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["plant_id"], name: "index_requests_on_plant_id", using: :btree
