@@ -3,9 +3,9 @@ import { Link } from 'react-router';
 
 const App = ({ children }) => (
   <div>
-    <header>
+    <header className="header">
       <Link to="/" className="header-link">
-        <h1>Plant Share</h1>
+        <h1><i className="fa fa-leaf" aria-hidden="true"></i> Plant Share</h1>
       </Link>
     </header>
     {children}

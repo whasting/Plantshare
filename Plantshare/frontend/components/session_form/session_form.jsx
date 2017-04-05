@@ -32,9 +32,9 @@ class SessionForm extends React.Component {
 
 	navLink() {
 		if (this.props.formType === "login") {
-			return <Link to="/signup">sign up instead</Link>;
+			return <Link to="/signup">sign up</Link>;
 		} else {
-			return <Link to="/login">log in instead</Link>;
+			return <Link to="/login">log in</Link>;
 		}
 	}
 
@@ -53,28 +53,30 @@ class SessionForm extends React.Component {
 	render() {
 		return (
 			<div className="login-form-container">
+
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to Plant Share!
-					<br/>
-					Please {this.props.formType} or {this.navLink()}
-					<div className="login-form">
+					<div className="login-header">
+						<h3>Welcome to Plant Share!</h3>
 						<br/>
-						<label> Username:
-							<input type="text"
-								value={this.state.username}
-								onChange={this.update("username")}
-								className="login-input" />
-						</label>
-						<br/>
-						<label> Password:
-							<input type="password"
-								value={this.state.password}
-								onChange={this.update("password")}
-								className="login-input" />
-						</label>
-						<br/>
-						<input type="submit" value="Submit" />
+						<h4>Please {this.props.formType} or <span>{this.navLink()}</span> instead</h4>
 					</div>
+
+					<div className="login-form">
+
+						<input type="text"
+							value={this.state.username}
+							placeholder="Username"
+							onChange={this.update("username")}
+							className="login-input" />
+
+						<input type="password"
+							value={this.state.password}
+							placeholder="Password"
+							onChange={this.update("password")}
+							className="login-input" />
+
+					</div>
+					<input type="submit" value="Submit" />
 				</form>
 			</div>
 		);

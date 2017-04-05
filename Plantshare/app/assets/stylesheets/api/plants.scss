@@ -1,3 +1,28 @@
 // Place all the styles related to the Api::Plants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.plant-index-container{
+  font-family: 'Lato', sans-serif;
+}
+
+.plant-index{
+  display: flex;
+  flex-direction: column;
+
+  margin: 10px;
+  list-style: none;
+}
+
+.plant-index-container h1{
+  margin: 10px;
+  font-family: inherit;
+  font-size: 24px;
+}
+
+.plant-index-item{
+  margin: 10px;
+  padding: 20px;
+
+  border: 1px solid lightgrey;
+}
