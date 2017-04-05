@@ -12,4 +12,42 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+
+html, body, header, section, article, div, h1, h2, h3, h4, form, ul, li, input, a {
+ margin: 0;
+ padding: 0;
+ border: 0;
+
+ font: inherit;
+ text-align: inherit;
+ text-decoration: inherit;
+ color: inherit;
+
+ /*background: inherit;*/
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+ height: 100%;
+ font-family: sans-serif;
+}
+
+.header{
+  display: flex;
+
+  height: 50px;
+
+  background-color: aliceblue;
+}
+
+.header a{
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+}
+
+.header a h1{
+  margin: 10px;
+}
