@@ -18,9 +18,9 @@ class Home extends React.Component {
     if(this.props.currentUser){
       return(
         <div>
+          <button onClick={() => this.props.logout()}>Log Out</button>
           <PlantIndexContainer />
 
-          <button onClick={() => this.props.logout()}>Log Out</button>
         </div>
       );
     } else {

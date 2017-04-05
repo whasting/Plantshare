@@ -15,11 +15,17 @@ class PlantIndex extends React.Component {
 
   render(){
     return(
-      <div>
+      <div className="plant-index-container">
         <h1>Plants!</h1>
-        <ul>
+        <ul className="plant-index">
           {this.props.plants.map((plant, idx) =>
-            <PlantIndexItem key={idx} plant={plant} />
+            <li
+              key={idx}
+              className="plant-index-item"
+              >
+              <img></img>
+              {plant.title}
+            </li>
           )}
         </ul>
       </div>
