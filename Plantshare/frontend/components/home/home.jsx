@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 
+import PlantIndexContainer from '../plant_index/plant_index_container';
+
 class Home extends React.Component {
   constructor(props){
     super(props);
@@ -16,7 +18,8 @@ class Home extends React.Component {
     if(this.props.currentUser){
       return(
         <div>
-          <h1>Plants go here!</h1>
+          <PlantIndexContainer />
+
           <button onClick={() => this.props.logout()}>Log Out</button>
         </div>
       );

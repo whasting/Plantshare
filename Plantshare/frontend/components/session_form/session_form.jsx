@@ -38,17 +38,17 @@ class SessionForm extends React.Component {
 		}
 	}
 
-	renderErrors() {
-		return(
-			<ul>
-				{this.props.errors.map((error, i) => (
-					<li key={`error-${i}`}>
-						{error}
-					</li>
-				))}
-			</ul>
-		);
-	}
+	// renderErrors() {
+	// 	return(
+	// 		<ul>
+	// 			{this.props.errors.map((error, i) => (
+	// 				<li key={`error-${i}`}>
+	// 					{error}
+	// 				</li>
+	// 			))}
+	// 		</ul>
+	// 	);
+	// }
 
 	render() {
 		return (
@@ -57,7 +57,6 @@ class SessionForm extends React.Component {
 					Welcome to Plant Share!
 					<br/>
 					Please {this.props.formType} or {this.navLink()}
-					{this.renderErrors()}
 					<div className="login-form">
 						<br/>
 						<label> Username:

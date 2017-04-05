@@ -9,6 +9,7 @@ import App from './app';
 
 import HomeContainer from './home/home_container';
 import SessionFormContainer from './session_form/session_form_container';
+import PlantIndexContainer from './plant_index/plant_index_container';
 
 const Root = ({ store }) => {
 
