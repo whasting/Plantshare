@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 
-import PlantIndexContainer from '../plant_index/plant_index_container';
+import PlantIndexContainer from './plant_index_container';
+import PlantIndexItem from './plant_index_item';
 
 class PlantIndex extends React.Component {
   constructor(props){
@@ -18,7 +19,7 @@ class PlantIndex extends React.Component {
         <h1>Plants!</h1>
         <ul>
           {this.props.plants.map((plant, idx) =>
-            <li key={idx}>{plant.title}</li>
+            <PlantIndexItem key={idx} plant={plant} />
           )}
         </ul>
       </div>
