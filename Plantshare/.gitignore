@@ -22,3 +22,9 @@ node_modules
 # Ignore bundle
 bundle.js
 bundle.js.map
+
+build/
+.idea
+.gradle
+local.properties
+*.iml
