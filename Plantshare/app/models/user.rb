@@ -15,6 +15,15 @@ class User < ApplicationRecord
   validates :username, :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
+  has_many :plants,
+    foreign_key: :owner_id
+    
+  has_many :requests
+
+  has_many :plant_requests,
+    through: :requests,
+    source: :plant
+
   attr_reader :password
   after_initialize :ensure_session_token
 

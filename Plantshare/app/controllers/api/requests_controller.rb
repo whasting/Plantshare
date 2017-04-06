@@ -1,6 +1,4 @@
 class Api::RequestsController < ApplicationController
-	belongs_to: user
-	belongs_to: plant
 
 	def index
 		@requests = current_user.requests.all

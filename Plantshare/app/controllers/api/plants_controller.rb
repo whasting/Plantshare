@@ -1,6 +1,12 @@
 class Api::PlantsController < ApplicationController
   def index
-    @plants = Plant.all
+    if(owners_plants)
+      @plants = current_user.plants
+    elsif request_plants
+      @plants = current_user.plant_requests
+    else
+      @plants = Plant.all
+    end
   end
 
   def create
@@ -45,5 +51,13 @@ class Api::PlantsController < ApplicationController
         :start_time,
         :end_time
       )
+  end
+
+  def owners_plants
+    params[:owners_plants]
+  end
+
+  def request_plants
+    params[:request_plants]
   end
 end
