@@ -21,9 +21,6 @@ class PlantForm extends React.Component {
       };
     }
 
-
-    debugger;
-
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
@@ -44,30 +41,32 @@ class PlantForm extends React.Component {
     this.props.closeModal();
   }
 
-  update(property) {
-    return e => this.setState({
-      [property]: e.target.value
-    });
+  update(field) {
+    return e => this.setState({ [field]: e.target.value });
   }
 
   render() {
-    // const { plant } = this.props.plant;
     return (
-      <div >
-        <form onSubmit={this.handleSubmit}>
+      <div className="plant-form-container">
+        <form onSubmit={this.handleSubmit} className="plant-form">
           <label >Title</label>
             <input type="text" value={this.state.title}
               onChange={this.update("title")} />
 
+
           <label >Description</label>
-            <input type="text" value={this.state.description}
+            <textarea type="text" value={this.state.description}
               onChange={this.update("description")} />
 
-          <label >Instructions</label>
-          <input type="text" value={this.state.instructions}
-            onChange={this.update("instructions")} />
 
-          <input type="submit" value={`${this.props.formType} Plant`}/>
+          <label >Instructions</label>
+            <textarea type="text" value={this.state.instructions}
+              onChange={this.update("instructions")} />
+
+
+          <div className="plant-form-submit">
+            <input type="submit" value={`${this.props.formType} Plant`}/>
+          </div>
         </form>
       </div>
     );

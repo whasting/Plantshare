@@ -63,9 +63,9 @@ class PlantIndex extends React.Component {
 
           <button onClick={this.handleRequestPlants}
             className={this.currentTab(3)}>Your Requested Plants</button>
+          <ModalForm />
         </div>
 
-        <ModalForm />
 
         <ul className="plant-index">
           {this.props.plants.map((plant, idx) =>
