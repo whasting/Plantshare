@@ -10,6 +10,7 @@ import App from './app';
 import HomeContainer from './home/home_container';
 import SessionFormContainer from './session_form/session_form_container';
 import PlantIndexContainer from './plant_index/plant_index_container';
+import PlantDetailContainer from './plant_detail/plant_detail_container';
 
 const Root = ({ store }) => {
 
@@ -34,6 +35,7 @@ const Root = ({ store }) => {
           <IndexRoute component={HomeContainer} onEnter={_ensureLoggedIn}/>
           <Route path="/login" component={SessionFormContainer} />
           <Route path="/signup" component={SessionFormContainer} />
+          <Route path="/plants/:id" component={PlantDetailContainer} />
         </Route>
       </Router>
     </Provider>
