@@ -18,9 +18,9 @@ import {
 
 import { Provider } from 'react-redux';
 
-import PlantIndexContainer from './frontend/components/plants/plant_index_container';
+import PlantIndexContainer from './mobile/components/plants/plant_index_container';
 
-import configureStore from './frontend/store/store';
+import configureStore from './mobile/store/store';
 
 let store = configureStore();
 
