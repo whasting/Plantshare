@@ -3,6 +3,7 @@ import { Link, hashHistory } from 'react-router';
 
 import PlantIndexContainer from './plant_index_container';
 import PlantIndexItem from './plant_index_item';
+import ModalForm from '../modal_form/modal_form';
 
 class PlantIndex extends React.Component {
   constructor(props){
@@ -62,6 +63,7 @@ class PlantIndex extends React.Component {
 
           <button onClick={this.handleRequestPlants}
             className={this.currentTab(3)}>Your Requested Plants</button>
+          <ModalForm />
         </div>
 
 
