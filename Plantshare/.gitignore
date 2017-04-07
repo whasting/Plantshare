@@ -23,6 +23,7 @@ node_modules
 bundle.js
 bundle.js.map
 
+android/
 build/
 .idea
 .gradle
