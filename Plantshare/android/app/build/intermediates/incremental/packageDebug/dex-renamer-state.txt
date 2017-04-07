@@ -1,7 +1,0 @@
-#Thu Apr 06 18:03:19 PDT 2017
-base.0=/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_afe1e078c6eb074ce51ae69cf7445dc8f5f57b93
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_8c4d1f7ef7b551adde64798d0f7840e04f0ec43c/classes.dex
-base.1=/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_8c4d1f7ef7b551adde64798d0f7840e04f0ec43c
-file.0=/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_afe1e078c6eb074ce51ae69cf7445dc8f5f57b93/classes.dex
