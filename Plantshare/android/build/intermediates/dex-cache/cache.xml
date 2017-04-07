@@ -3,210 +3,435 @@
 
     <item
         is-multidex="false"
-        jar="/home/whasting/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_f017177b5f15ee6f85b02d791d51e7b0faac7869.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
         revision="25.0.0"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_1c2d1a23c79c6cccda97e127d9d6b027d0c786a8.jar" />
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_afe1e078c6eb074ce51ae69cf7445dc8f5f57b93/classes.dex" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/whasting/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.0"
-        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1_a95b5b4447ec47e92cd6aa2f16b4d6aacf04226c.jar" />
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_bc042b2c8c4eae871dd7d61cc1f0dd92f8e3dc27.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/whasting/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.0"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_677deae4de6e5a88f659784344ecab430fe42c12.jar" />
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_c560df5125bac38568edf9474247dcbd0f7c82b5.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/whasting/.android/build-cache/9e21d2c861d9c016d09fe9541da699f7b6d32d97/output/jars/classes.jar"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.0"
-        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/classes_aeeccafc6fa0232cca9ed0c3d086f79f11cb0a39.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/whasting/.android/build-cache/1b1aa0d6361be15df8ba70c359fe566602208158/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/classes_1790c62754a04327e48ff34692d99c3288102384.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/whasting/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_e39ef58e2d69fc576721d780726ff7ec90ff3e93.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/whasting/.android/build-cache/39e7a1a57e84fd54c9f46de0e0b93b36bb2d679c/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
+        revision="23.0.1"
         sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/classes_347aaecf371d64249aace16f36975a10c2971e1a.jar" />
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_cb47eecff61c0c1df1c176381f3118ffe59402ca.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/whasting/.android/build-cache/932421b985a2e54045bff2493dd9f01847448302/output/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/0087e88999b14decc1efc5520ed408f3fd3ae588/output/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/classes_562f26bbc5e266ebdcd546e2be1c508f0e29933c.jar" />
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_03690cbb6d1d17c3737e980bdd7bb0f3ad28ba5b/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/whasting/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0_6c7ad3202190cb51a413d44aadb85a964153bab1.jar" />
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.9.0_9db33882d15848b54371be757455290084740933/classes.dex" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/whasting/.android/build-cache/c378d75370d3d5da6b8ca160aa87a0a7566da2ef/output/jars/classes.jar"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.0"
-        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/classes_fbc81247b5466e9b45d0fb69c2dd8896a5577b5b.jar" />
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_2dbd1a8be49ad7506a62fbb4925b8ee3f870ab32.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/whasting/.android/build-cache/b66f9669f27d0331439b805d31412bc0700cdb06/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f66dccf471b94d5d28c54a6b8ca9e1668b0fb0ce">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/classes_66828310be8770ea69b2d35430abdf32255f47a2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/whasting/.android/build-cache/14eb2dfb553ab5c4fb9c083e41148b14664c936f/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/classes_6a12482629622d3771740277964ccc7bb1da76dc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/whasting/.android/build-cache/b66f9669f27d0331439b805d31412bc0700cdb06/output/jars/libs/infer-annotations-1.5.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5_7284d68212c4d5865e5b3e6b2188ed6fdd71b22d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/whasting/.android/build-cache/2bec1a20f9d93b02901e704d88e66dca01e8b60c/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/classes_0b22f58f3e0770ecfff692e6cedaf8c731ebf8bf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/whasting/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_373a9a689ea7aa8356b04e3d3ed7af387c3b6370.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/whasting/.android/build-cache/b1e4854c5a6d0891c59500a39d214d90eae31a14/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/classes_7e07557c3c21e62c8277cc730b0d015c6759164e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/whasting/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_df1ee73a7c92949ac6f9906007d022a28979726c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/whasting/.android/build-cache/4d6866ba8de8375368dbd7a1451be19655456bf4/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/classes_ac39dbb7b99664d50b7e6d93dbdb88c11980b336.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/whasting/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="63994437f62bc861bc20c605d12962f7246116d1">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1_1fd021e37fcc02a5c405d12e95572a01790ca748.jar" />
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-urlconnection-3.4.1_e72b83dab8dd73a215b891d29338fcec9e492456/classes.dex" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/whasting/.android/build-cache/2bec1a20f9d93b02901e704d88e66dca01e8b60c/output/jars/libs/internal_impl-23.4.0.jar"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.0"
+        revision="23.0.1"
         sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_a436d790bd0c92292b9df9373b307054375e2eb5.jar" />
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_606ce8e034302a8549f5c3d0c2d557240c3666c4.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/whasting/.android/build-cache/05d213583ffd21292136e437e6ebbe109a15eedf/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/classes_70110971c82d226d6f6918047099cdcdc88cf5da.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/whasting/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_bfd9d2514ccf660ea8de4ca2162cf2fc57198e0b.jar" />
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.4.1_cf9395204e1968019215cb7b32d349f98f978a77/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/8cde7bc6eada7665b4f53645da59ff3105f2f358/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d002f5f8f0e8fc2d4cfd79ac74d9153fe803c621/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/0d69b1d96e3762220510ff09772e65c5936c81f3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b599b4fd6e0a3bdf9db0ce29a959255ae33810ad/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/adb8b24404d3c0f408b7889a748a12fc8c3f6616/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0ebd992de2bc0d5f05b7985f089a4129d311cbac/classes.dex" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/whasting/.android/build-cache/15bea3bb5c8bb417ee0289ebec2d9c7124257620/output/jars/classes.jar"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
         jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_2ee668f4b1a40142d12bab9726c7696725917387.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.0.1_b7bf05a4d7006579536644350e409d24f5ee3025.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_33e27f54fdc0ab3f7ef7cc18382c1dfe965435a9.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/2b91133fe8767831c3ccd627417503ab0209c499/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_814dbd25020f66dd01eb2b4c59fd9085629404ec/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_e5b4930ebb756d2f8f285880c39eab1527c6810d.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a81e69969cfb1618db04738e6b7b947ad9736567">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_8c4d1f7ef7b551adde64798d0f7840e04f0ec43c/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_dafdb31dba5b2c2ef0da8d3b32b109c86f618766.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-ws-3.4.1_ab74a910004ed7f1b6d101bb2030bd2102bf81c3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/staticlayout-proxy-1.0_2ee668f4b1a40142d12bab9726c7696725917387/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_79fe6d338d78242fc8e27f7336d9c4e0983f657f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/850b86b49d1458433831c3944e6e45618dd54a13/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b2a58107fb1838499c2c852c76019fdb9fe65a3c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/778d00cf5512876db735178be74ea77b4405f939/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3c9f633cfd63b88550721a6986a62713c7ffa329/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/82ce19fbf7e626e4a1198bc6ef60b94c2e110019/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b6edf9d98d96bd2105dc385378bbde4ddf286cb1/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_59fdb6856355388d77b64a47618a0778148bed3f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.43.2/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5_07e2363ffb8662e45871c08581af7f71add30cb5.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/2a6920bf1f3e5ee1d043e9bc8f4d2ef6b88cebf5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_474777bfcb4926672f426a9da7b3b1577f31f765/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_c7e3dd2e44638e136ed5b62536b2a004411c2dc3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/e4708a16f52cf469243390f7665300736d37d742/output/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/classes_5d6477e4bfc56616e34296bda1bdf95297dd093a.jar" />
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dc4e4780da3756806ab0176e4cf62378113bd8b6/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_c84572f033af9be152bf4d79400ebd289b283675.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1_ab74a910004ed7f1b6d101bb2030bd2102bf81c3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.43.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dd7e9e4044d541b253c526294b9f4985029d846c">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.43.2_fe3d5d87b1d2956f97474b2bb62accd3a4365d2d.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/07e7ae3199915a7e95679d341c869216ab7ea015/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dd7e9e4044d541b253c526294b9f4985029d846c">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4c1021afa233441d611d5ceed7c08a445ec42699/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-tasks-1.4.0_59fdb6856355388d77b64a47618a0778148bed3f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/2a6920bf1f3e5ee1d043e9bc8f4d2ef6b88cebf5/output/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_ee6cb915f5266113f81cfebd5c247da314863539/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_2ace4a66811b74f576d34b484ff8db7b79156968.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/3666eec42ce34ba6b2ff4ed263110147ea28c635/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1797fbf33aff4dda03a317dd0795f1390cf6883c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/jsr305-3.0.0_2dbd1a8be49ad7506a62fbb4925b8ee3f870ab32/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0_9db33882d15848b54371be757455290084740933.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_c7e3dd2e44638e136ed5b62536b2a004411c2dc3.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/javax.inject-1_c84572f033af9be152bf4d79400ebd289b283675/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1_e72b83dab8dd73a215b891d29338fcec9e492456.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_a019f28b6ea7cde53c0f99500392f71390ade59b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/colin/.android/build-cache/07e7ae3199915a7e95679d341c869216ab7ea015/output/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/infer-annotations-1.5_420a46e35bb2b47558bc83f949f93e642dd288a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/colin/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_cf9395204e1968019215cb7b32d349f98f978a77.jar" />
     </item>
 
 </items>

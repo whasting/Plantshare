@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/whasting/Documents/personal/Plantshare/Plantshare/android/app/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/colin/Documents/group_project/Plantshare/Plantshare/android/app/src/debug/shaders"/></dataSet></merger>
