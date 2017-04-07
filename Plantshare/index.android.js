@@ -19,6 +19,7 @@ import {
 import { Provider } from 'react-redux';
 
 import PlantIndexContainer from './mobile/components/plants/plant_index_container';
+import PlantDetailContainer from './mobile/components/plant_detail/plant_detail_container';
 
 import configureStore from './mobile/store/store';
 
@@ -34,15 +35,19 @@ class HomeScreen extends React.Component {
      <View>
        <Text>Hello, Plantshare!</Text>
        <Button
-         onPress={() => navigate('Chat')}
+         onPress={() => navigate('Index')}
          title="See Plants"
+       />
+       <Button
+         onPress={() => navigate('Detail')}
+         title="See A Plant"
        />
      </View>
    );
  }
 }
 
-class ChatScreen extends React.Component {
+class IndexScreen extends React.Component {
   render() {
     const navigationOptions = {
       title: 'Plants',
@@ -55,9 +60,23 @@ class ChatScreen extends React.Component {
   }
 }
 
+class DetailScreen extends React.Component {
+  render() {
+    const navigationOptions = {
+      title: 'Plant',
+    };
+    return (
+      <View>
+        <PlantDetailContainer store={store} />
+      </View>
+    );
+  }
+}
+
 const App = StackNavigator({
   Home: { screen: HomeScreen },
-  Chat: { screen: ChatScreen },
+  Index: { screen: IndexScreen },
+  Detail: { screen: DetailScreen }
 });
 
 const styles = StyleSheet.create({
