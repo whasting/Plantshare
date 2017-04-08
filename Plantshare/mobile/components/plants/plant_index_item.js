@@ -48,10 +48,11 @@ class PlantIndexItem extends React.Component {
 
 const styles = StyleSheet.create({
   index_item: {
-    'backgroundColor': '#527FE4',
-    'marginBottom': 5,
+    backgroundColor: '#E8F5E9',
     flex: 0,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    paddingTop: 5,
+    paddingBottom: 5
   },
   index_item_text: {
     'fontSize': 20,
@@ -59,9 +60,9 @@ const styles = StyleSheet.create({
     'margin': 10,
   },
   plant_image: {
-    height: 100,
-    width: 100,
-    borderColor: 'rgba(0, 0, 0, .25)',
+    height: 75,
+    width: 75,
+    borderColor: 'transparent',
     borderWidth: 1,
     borderRadius: 50,
     marginRight: 15
