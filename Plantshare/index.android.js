@@ -1,6 +1,6 @@
 'use strict';
 
-import React from 'react';
+import React, { Component } from 'react';
 
 import {
   AppRegistry,
@@ -25,6 +25,46 @@ import SessionFormContainer from './mobile/components/session_form/session_form_
 import configureStore from './mobile/store/store';
 
 let store = configureStore();
+
+export default class NavAllDay extends Component {
+  render() {
+  const routes = [
+    {title: 'Login', index: 0},
+    {title: 'Index', index: 1},
+  ];
+
+  const navigationOptions = {
+    title: 'Welcome',
+  };
+  const { navigate } = this.props.navigation;
+
+  StackNavigator({
+    Home: { screen: HomeScreen },
+    Login: { screen: LoginScreen },
+    Index: { screen: IndexScreen },
+    Detail: { screen: DetailScreen }
+  });
+
+  return (
+    <Navigator
+      initialRoute={routes[0]}
+      initialRouteStack={routes}
+      renderScene={(route, navigator) =>
+        <TouchableHighlight onPress={() => {
+          if (route.index === 0) {
+            navigate('Login');
+          } else if(route.index === 1) {
+            navigate('Index');
+          }
+        }}>
+        <Text>Hello {route.title}!</Text>
+        </TouchableHighlight>
+      }
+      style={{padding: 100}}
+    />
+  );
+}
+}
 
 class HomeScreen extends React.Component {
  render() {
@@ -59,7 +99,7 @@ class IndexScreen extends React.Component {
     };
     return (
       <View>
-        <PlantIndexContainer store={store} />
+        <PlantIndexContainer store={store}/>
       </View>
     );
   }
