@@ -43,7 +43,8 @@ class PlantIndex extends React.Component {
               <PlantIndexItem
                 key={plant.id}
                 plant={plant}
-                backgroundColor={backgroundColor} />
+                backgroundColor={backgroundColor}
+                navigation={this.props.navigation}/>
               );
             }
           )}
