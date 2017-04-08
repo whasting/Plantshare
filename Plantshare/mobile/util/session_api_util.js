@@ -1,24 +1,44 @@
 import { receiveCurrentUser, receiveErrors } from '../actions/session_actions';
 
-export const login = (user) => {
-  return $.ajax({
+export const login = (_user) => {
+  return fetch('http://10.0.2.2:3000/api/session', {
     method: 'POST',
-    url: '/api/session',
-    data: user
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      user: _user
+    })
+  }).then(r => {
+    return r.json();
   });
 };
 
-export const signup = (user) => {
-  return $.ajax({
+export const signup = (_user) => {
+
+  return fetch('http://10.0.2.2:3000/api/users', {
     method: 'POST',
-    url: '/api/user',
-    data: user
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      user: _user
+    })
+  }).then(r => {
+    return r.json();
   });
 };
 
 export const logout = () => {
-  return $.ajax({
-    method: 'delete',
-    url: '/api/session'
-  });
+
+  return fetch('http://10.0.2.2:3000/api/session', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    }}).then(r => {
+        return r.json();
+    });
 };
