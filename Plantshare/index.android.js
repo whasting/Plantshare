@@ -20,6 +20,7 @@ import { Provider } from 'react-redux';
 
 import PlantIndexContainer from './mobile/components/plants/plant_index_container';
 import PlantDetailContainer from './mobile/components/plant_detail/plant_detail_container';
+import SessionFormContainer from './mobile/components/session_form/session_form_container';
 
 import configureStore from './mobile/store/store';
 
@@ -39,6 +40,10 @@ class HomeScreen extends React.Component {
          onPress={() => navigate('Detail')}
          title="See A Plant"
        />
+       <Button
+          onPress={() => navigate('Login')}
+          title="Login Here!"
+        />
      </View>
    );
  }
@@ -55,6 +60,19 @@ class IndexScreen extends React.Component {
     return (
       <View>
         <PlantIndexContainer store={store} />
+      </View>
+    );
+  }
+}
+
+class LoginScreen extends React.Component {
+  render() {
+    const navigationOptions = {
+      title: 'Login',
+    };
+    return (
+      <View>
+        <SessionFormContainer store={store} />
       </View>
     );
   }
@@ -86,6 +104,7 @@ const AppNavigator = StackNavigator({
       }
     }
   },
+  Login: { screen: LoginScreen },
   Index: { screen: IndexScreen,
     navigationOptions: {
       title: 'Index',
