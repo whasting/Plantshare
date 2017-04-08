@@ -27,13 +27,25 @@ class PlantIndex extends React.Component {
 
 
   render(){
+    let backgroundColor;
     return(
       <View className="plant-index-container">
-        <Text>Plants!</Text>
         <View className="plant-index">
-          {this.props.plants.map((plant, idx) => (
-            <PlantIndexItem key={plant.id} plant={plant} />
-            )
+          {this.props.plants.map((plant, idx) => {
+            if (idx % 2 == 0) {
+              //evens
+              backgroundColor = '#E8F5E9';
+            } else {
+              //odds
+              backgroundColor = '#DCEDC8';
+            }
+            return (
+              <PlantIndexItem
+                key={plant.id}
+                plant={plant}
+                backgroundColor={backgroundColor} />
+              );
+            }
           )}
         </View>
       </View>
