@@ -27,12 +27,6 @@ let store = configureStore();
 
 class HomeScreen extends React.Component {
  render() {
-   const navigationOptions = {
-    title: 'Welcome',
-    navBar: {
-      backgroundColor:'#4CAF50',
-    }
-   };
    const { navigate } = this.props.navigation;
    return (
      <View>
@@ -54,6 +48,9 @@ class IndexScreen extends React.Component {
   render() {
     const navigationOptions = {
       title: 'Plants',
+      tintColor: {
+        backgroundColor:'white'
+      }
     };
     return (
       <View>
@@ -65,9 +62,6 @@ class IndexScreen extends React.Component {
 
 class DetailScreen extends React.Component {
   render() {
-    const navigationOptions = {
-      title: 'Plant',
-    };
     return (
       <View style={styles.navbar}>
         <PlantDetailContainer store={store} />
@@ -77,8 +71,37 @@ class DetailScreen extends React.Component {
 }
 
 const AppNavigator = StackNavigator({
-  Home: { screen: HomeScreen },
-  Index: { screen: IndexScreen },
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: {
+      title: 'Plantshare',
+      header: {
+        style: {
+          backgroundColor: '#4CAF50'
+        },
+        titleStyle: {
+          color: 'white',
+          alignSelf: 'center'
+        }
+      }
+    }
+  },
+  Index: { screen: IndexScreen,
+    navigationOptions: {
+      title: 'Index',
+      header: {
+        style: {
+          flex: 0,
+          alignItems: 'flex-start',
+          justifyContent: 'space-between',
+          backgroundColor: '#4CAF50'
+        },
+        navTitle: {
+          color: 'white'
+        }
+      }
+    }
+  },
   Detail: { screen: DetailScreen }
 });
 
@@ -101,7 +124,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   navbar: {
-    backgroundColor: '#4CAF50'
+    backgroundColor: 'white'
   }
 });
 

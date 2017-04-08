@@ -13,6 +13,7 @@ class PlantIndexItem extends React.Component {
     super(props);
 
     this.handlePress = this.handlePress.bind(this);
+    this.backgroundColor = this.props.backgroundColor;
   }
 
   handlePress() {
@@ -22,46 +23,54 @@ class PlantIndexItem extends React.Component {
 
   render() {
     let plant = this.props.plant;
+    styles.index_item.backgroundColor = this.backgroundColor;
+    console.log(styles.index_item);
     return (
       <TouchableHighlight
         onPress={() => console.log(plant.id)}>
         <View
-          style={styles.index_item}
+          style={
+            [styles.index_item,
+            {backgroundColor: this.backgroundColor}]}
           className="plant-index-item">
+          <View className="plant-index-text-container">
+            <Text style={styles.index_item_title}>
+              {plant.title}
+            </Text>
+            <Text style={styles.index_item_text}>
+              Blah, blah, username?
+            </Text>
+          </View>
           <Image
             style={styles.plant_image}
             source={{uri: plant.img_url}}
             className="plant-index-image" />
-          <View className="plant-index-text-container">
-            <Text style={styles.index_item_text}>
-              {plant.title}
-            </Text>
-            <Text>
-              {plant.description}
-            </Text>
-          </View>
         </View>
       </TouchableHighlight>
     );
   }
 }
 
-const styles = StyleSheet.create({
+let styles = StyleSheet.create({
   index_item: {
-    backgroundColor: '#E8F5E9',
     flex: 0,
     flexDirection: 'row',
+    justifyContent: 'space-between',
     paddingTop: 5,
     paddingBottom: 5
   },
+  index_item_title: {
+    fontSize: 20,
+    marginLeft: 10,
+    fontWeight: 'bold'
+  },
   index_item_text: {
-    'fontSize': 20,
-    'textAlign': 'center',
-    'margin': 10,
+    fontSize: 16,
+    marginLeft: 10,
   },
   plant_image: {
-    height: 75,
-    width: 75,
+    height: 70,
+    width: 70,
     borderColor: 'transparent',
     borderWidth: 1,
     borderRadius: 50,
