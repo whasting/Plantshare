@@ -28,9 +28,6 @@ let store = configureStore();
 
 class HomeScreen extends React.Component {
  render() {
-   const navigationOptions = {
-     title: 'Welcome',
-   };
    const { navigate } = this.props.navigation;
    return (
      <View>
@@ -44,9 +41,9 @@ class HomeScreen extends React.Component {
          title="See A Plant"
        />
        <Button
-         onPress={() => navigate('Login')}
-         title="Login Here!"
-       />
+          onPress={() => navigate('Login')}
+          title="Login Here!"
+        />
      </View>
    );
  }
@@ -56,6 +53,9 @@ class IndexScreen extends React.Component {
   render() {
     const navigationOptions = {
       title: 'Plants',
+      tintColor: {
+        backgroundColor:'white'
+      }
     };
     return (
       <View>
@@ -80,23 +80,55 @@ class LoginScreen extends React.Component {
 
 class DetailScreen extends React.Component {
   render() {
-    const navigationOptions = {
-      title: 'Plant',
-    };
     return (
-      <View>
+      <View style={styles.navbar}>
         <PlantDetailContainer store={store} />
       </View>
     );
   }
 }
 
-const App = StackNavigator({
-  Home: { screen: HomeScreen },
+const AppNavigator = StackNavigator({
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: {
+      title: 'Plantshare',
+      header: {
+        style: {
+          backgroundColor: '#4CAF50'
+        },
+        titleStyle: {
+          color: 'white',
+          alignSelf: 'center'
+        }
+      }
+    }
+  },
   Login: { screen: LoginScreen },
-  Index: { screen: IndexScreen },
+  Index: { screen: IndexScreen,
+    navigationOptions: {
+      title: 'Index',
+      header: {
+        style: {
+          backgroundColor: '#4CAF50'
+        },
+        titleStyle: {
+          color: 'white',
+          alignSelf: 'center'
+        }
+      }
+    }
+  },
   Detail: { screen: DetailScreen }
 });
+
+class App extends React.Component {
+  render() {
+    return (
+      <AppNavigator style={styles.navbar} />
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -108,6 +140,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
+  navbar: {
+    backgroundColor: 'white'
+  }
 });
 
 AppRegistry.registerComponent('Plantshare', () => App);
