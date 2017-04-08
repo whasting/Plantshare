@@ -25,13 +25,15 @@ class PlantIndexItem extends React.Component {
     return (
       <TouchableHighlight
         onPress={() => console.log(plant.id)}>
-        <View className="plant-index-item">
+        <View
+          style={styles.index_item}
+          className="plant-index-item">
           <Image
-            style={{height: 100, width: 100}}
+            style={styles.plant_image}
             source={{uri: plant.img_url}}
             className="plant-index-image" />
           <View className="plant-index-text-container">
-            <Text className="plant-index-title">
+            <Text style={styles.index_item_text}>
               {plant.title}
             </Text>
             <Text>
@@ -46,14 +48,24 @@ class PlantIndexItem extends React.Component {
 
 const styles = StyleSheet.create({
   index_item: {
-    flex: 1,
-    justifyContent: 'center',
+    'backgroundColor': '#527FE4',
+    'marginBottom': 5,
+    flex: 0,
+    flexDirection: 'row'
   },
   index_item_text: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+    'fontSize': 20,
+    'textAlign': 'center',
+    'margin': 10,
   },
+  plant_image: {
+    height: 100,
+    width: 100,
+    borderColor: 'rgba(0, 0, 0, .25)',
+    borderWidth: 1,
+    borderRadius: 50,
+    marginRight: 15
+  }
 });
 
 export default PlantIndexItem;

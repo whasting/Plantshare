@@ -28,7 +28,10 @@ let store = configureStore();
 class HomeScreen extends React.Component {
  render() {
    const navigationOptions = {
-     title: 'Welcome',
+    title: 'Welcome',
+    navBar: {
+      backgroundColor:'#4CAF50',
+    }
    };
    const { navigate } = this.props.navigation;
    return (
@@ -66,18 +69,26 @@ class DetailScreen extends React.Component {
       title: 'Plant',
     };
     return (
-      <View>
+      <View style={styles.navbar}>
         <PlantDetailContainer store={store} />
       </View>
     );
   }
 }
 
-const App = StackNavigator({
+const AppNavigator = StackNavigator({
   Home: { screen: HomeScreen },
   Index: { screen: IndexScreen },
   Detail: { screen: DetailScreen }
 });
+
+class App extends React.Component {
+  render() {
+    return (
+      <AppNavigator style={styles.navbar} />
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -89,6 +100,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
+  navbar: {
+    backgroundColor: '#4CAF50'
+  }
 });
 
 AppRegistry.registerComponent('Plantshare', () => App);
