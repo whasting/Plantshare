@@ -110,13 +110,11 @@ const AppNavigator = StackNavigator({
       title: 'Index',
       header: {
         style: {
-          flex: 0,
-          alignItems: 'flex-start',
-          justifyContent: 'space-between',
           backgroundColor: '#4CAF50'
         },
-        navTitle: {
-          color: 'white'
+        titleStyle: {
+          color: 'white',
+          alignSelf: 'center'
         }
       }
     }
