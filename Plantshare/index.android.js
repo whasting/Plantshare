@@ -18,9 +18,20 @@ import {
 
 import { Provider } from 'react-redux';
 
-import PlantIndexContainer from './mobile/components/plants/plant_index_container';
+import PlantIndexContainer 
+  from './mobile/components/plants/plant_index_container';
 
 import configureStore from './mobile/store/store';
+
+import Login from './mobile/components/login/Login';
+
+export default class ReactNativeCommonScreens extends React.Component {
+  render() {
+    return (
+      <Login />
+    );
+  }
+}
 
 let store = configureStore();
 
