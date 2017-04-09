@@ -9,6 +9,7 @@ import {
   Text,
   Image,
   View,
+  ScrollView,
   Navigator,
   Button,
   TouchableHighlight
@@ -43,6 +44,12 @@ class PlantIndex extends React.Component {
 
   render(){
     let backgroundColor;
+    const { navigate } = this.props.navigation;
+    // <Button
+    //   onPress={() => navigate('Form')}
+    //   title="Create!"
+    //   />
+
     return(
       <View
         className="plant-index-container"
