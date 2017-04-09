@@ -24,4 +24,7 @@ class Plant < ApplicationRecord
     foreign_key: :owner_id
 
   has_many :requests
+
+  has_many :requesters, through: :requests, source: :user
+
 end
