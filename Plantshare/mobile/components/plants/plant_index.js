@@ -30,6 +30,34 @@ class PlantIndex extends React.Component {
     let backgroundColor;
     return(
       <View className="plant-index-container">
+        <View
+          className="plant-index-tabs"
+          style={{top: 150, flex: 1, flexDirection: 'row'}}>
+          <View
+            className="button1"
+            style={styles.button}>
+            <Button
+              onPress={() => console.log("hello")}
+              title='Plants'
+              color='#66BB6A'/>
+          </View>
+          <View
+            className="button2"
+            style={styles.button}>
+            <Button
+              onPress={() => console.log("hello")}
+              title='Listings'
+              color='#66BB6A'/>
+          </View>
+          <View
+            className="button3"
+            style={styles.button}>
+            <Button
+              onPress={() => console.log("hello")}
+              title='Requests'
+              color='#66BB6A'/>
+          </View>
+        </View>
         <View className="plant-index">
           {this.props.plants.map((plant, idx) => {
             if (idx % 2 == 0) {
@@ -51,6 +79,16 @@ class PlantIndex extends React.Component {
       </View>
     );
   }
+
 }
+
+const styles = StyleSheet.create({
+  button: {
+    flex: 1,
+    backgroundColor: 'red',
+    height: 50,
+    width: 50
+  }
+});
 
 export default PlantIndex;

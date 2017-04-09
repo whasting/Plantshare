@@ -89,6 +89,20 @@ class DetailScreen extends React.Component {
 }
 
 const AppNavigator = StackNavigator({
+  Index: { screen: IndexScreen,
+    navigationOptions: {
+      title: 'Index',
+      header: {
+        style: {
+          backgroundColor: '#4CAF50'
+        },
+        titleStyle: {
+          color: 'white',
+          alignSelf: 'center'
+        }
+      }
+    }
+  },
   Home: {
     screen: HomeScreen,
     navigationOptions: {
@@ -105,20 +119,6 @@ const AppNavigator = StackNavigator({
     }
   },
   Login: { screen: LoginScreen },
-  Index: { screen: IndexScreen,
-    navigationOptions: {
-      title: 'Index',
-      header: {
-        style: {
-          backgroundColor: '#4CAF50'
-        },
-        titleStyle: {
-          color: 'white',
-          alignSelf: 'center'
-        }
-      }
-    }
-  },
   Detail: { screen: DetailScreen }
 });
 
