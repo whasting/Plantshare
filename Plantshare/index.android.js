@@ -9,6 +9,7 @@ import {
   View,
   Navigator,
   Button,
+  Image,
   TouchableHighlight
 } from 'react-native';
 
@@ -30,12 +31,34 @@ class HomeScreen extends React.Component {
  render() {
    const { navigate } = this.props.navigation;
    return (
-     <View>
-       <Text>Hello, Plantshare!</Text>
-       <Button
-          onPress={() => navigate('Login')}
-          title="Login Here!"
-        />
+     <View style={styles.splash}>
+       <Image
+         style={styles.splashImage}
+         source={{uri: 'http://i.imgur.com/gVsGBmq.jpg'}}>
+         <Image
+           style={{
+             height: 75,
+             width: 300,
+             top: -150,
+             marginBottom: 15
+           }}
+           source={{uri: 'http://i.imgur.com/BnuV3N9.png'}} />
+         <View style={{
+             width: 250,
+             height: 40,
+             top: -75,
+             alignSelf: 'center',
+             borderColor: '#004D40',
+             borderWidth: 3,
+             borderRadius: 5
+           }}>
+           <Button
+              onPress={() => navigate('Login')}
+              color='#43A047'
+              title="Get Started"
+            />
+          </View>
+      </Image>
      </View>
    );
  }
@@ -43,12 +66,6 @@ class HomeScreen extends React.Component {
 
 class IndexScreen extends React.Component {
   render() {
-    const navigationOptions = {
-      title: 'Plants',
-      tintColor: {
-        backgroundColor:'white'
-      }
-    };
     return (
       <View style={{flex: 1}}>
         <PlantIndexContainer store={store} navigation={this.props.navigation}/>
@@ -87,7 +104,7 @@ const AppNavigator = StackNavigator({
       title: 'Plantshare',
       header: {
         style: {
-          backgroundColor: '#388E3C'
+          height: 0
         },
         titleStyle: {
           color: 'white',
@@ -101,7 +118,7 @@ const AppNavigator = StackNavigator({
       title: 'Plantshare',
       header: {
         style: {
-          backgroundColor: '#388E3C'
+          backgroundColor: '#2E7D32'
         },
         titleStyle: {
           color: 'white',
@@ -115,7 +132,7 @@ const AppNavigator = StackNavigator({
       title: 'Plantshare',
       header: {
         style: {
-          backgroundColor: '#388E3C'
+          backgroundColor: '#2E7D32'
         },
         titleStyle: {
           color: 'white',
@@ -129,7 +146,7 @@ const AppNavigator = StackNavigator({
       title: 'Plantshare',
       header: {
         style: {
-          backgroundColor: '#388E3C'
+          backgroundColor: '#2E7D32'
         },
         titleStyle: {
           color: 'white',
@@ -152,13 +169,22 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
   },
-  hello: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  splash: {
+    flex: 1
+  },
+  splashImage: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   navbar: {
     backgroundColor: 'white'
+  },
+  splashText: {
+    color: 'white',
+    alignSelf: 'center',
+    fontSize: 36,
+    fontFamily: 'Grand Hotel'
   }
 });
 

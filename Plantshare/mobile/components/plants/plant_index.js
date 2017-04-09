@@ -100,7 +100,7 @@ class PlantIndex extends React.Component {
 const styles = StyleSheet.create({
   button: {
     flex: 1,
-    backgroundColor: '#66BB6A',
+    backgroundColor: '#43A047',
     alignItems: 'center',
     justifyContent: 'center',
     borderRightWidth: 0.5,
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },
   activeButton: {
     flex: 1,
-    backgroundColor: '#43A047',
+    backgroundColor: '#4CAF50',
     alignItems: 'center',
     justifyContent: 'center',
     borderRightWidth: 0.5,

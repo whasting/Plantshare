@@ -53,9 +53,10 @@ class PlantDetail extends React.Component {
             color='#4CAF50'
             title='Request'/>
         </View>
-        <Text>Description: {plant.description}</Text>
-        <Text>Care Instruction: {plant.instructions}</Text>
-        <Text>Where Google Map goes...</Text>
+        <View style={styles.textContainer}>
+          <Text>Description: {plant.description}</Text>
+          <Text>Care Instruction: {plant.instructions}</Text>
+        </View>
       </View>
     );
   }
@@ -81,6 +82,12 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 15,
     alignSelf: 'center'
+  },
+  textContainer: {
+    marginTop: 15,
+    marginBottom: 10,
+    marginRight: 25,
+    marginLeft: 25
   }
 });
 
