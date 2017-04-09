@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     resources :plants, only: [:index, :create, :show, :update]
     resources :listings, only: [:show, :index]
     resources :requested_plants, only: [:show]
-    recources :requests, only: [:index, :create, :update, :destroy]
+    resources :requests, only: [:index, :create, :update, :destroy]
   end
 end
