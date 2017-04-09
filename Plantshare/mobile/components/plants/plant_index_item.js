@@ -20,7 +20,6 @@ class PlantIndexItem extends React.Component {
     const { navigate } = this.props.navigation;
 
     styles.index_item.backgroundColor = this.backgroundColor;
-    console.log(styles.index_item);
     return (
       <TouchableHighlight
         onPress={() => navigate('Detail', { plant: plant })}>
