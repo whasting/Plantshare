@@ -18,21 +18,37 @@ export const fetchPlant = (id) => {
     }}).then(r => r.json());
 };
 
-export const createPlant = (plant) => (
-  $.ajax({
-    url: `api/plants`,
-    method: 'POST',
-    data: {plant}
-  })
-);
+export const createPlant = (_plant) => {
 
-export const updatePlant = plant => (
-  $.ajax({
-    url: `api/plants/${plant.id}`,
+  return fetch('http://10.0.2.2:3000/api/plants', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      plant: _plant
+    })
+  }).then(r => {
+    return r.json();
+  });
+};
+
+export const updatePlant = (_plant) => {
+
+  return fetch(`http://10.0.2.2:3000/api/plants/${_plant.id}`, {
     method: 'PATCH',
-    data: { plant }
-  })
-);
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      plant: _plant
+    })
+  }).then(r => {
+    return r.json();
+  });
+};
 
 export const deletePlant = id => (
   $.ajax({

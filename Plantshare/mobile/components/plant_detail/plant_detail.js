@@ -21,20 +21,26 @@ class PlantDetail extends React.Component {
 
   render() {
     const plant = this.props.plant;
-    console.log(plant);
     let form = "";
+    const { navigate } = this.props.navigation;
 
-    // if(plant){
-    //   form = this.props.currentUser.id === plant.owner_id ? <ModalForm plant={plant}/> : "";
-    // }
+    if(plant){
+      const button = (<Button onPress={() => navigate('Form', { plant: plant , formType: "Update"})} title="Edit!" />);
+      form = this.props.currentUser.id === plant.owner_id ? button : <Text></Text>;
+    }
 
     return (
       <View style={styles.container}>
+        <Button
+           onPress={() => navigate('Index')}
+           title="Back to Index!"
+         />
         <Text>A Plant</Text>
         <Text>{plant.title}</Text>
         <Text>Description: {plant.description}</Text>
         <Text>Care Instruction: {plant.instructions}</Text>
         <Text>Where Google Map goes...</Text>
+        <View>{form}</View>
       </View>
     );
   }

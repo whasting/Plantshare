@@ -9,6 +9,7 @@ import {
   Text,
   Image,
   View,
+  ScrollView,
   Navigator,
   Button,
   TouchableHighlight
@@ -28,8 +29,14 @@ class PlantIndex extends React.Component {
 
   render(){
     let backgroundColor;
+    const { navigate } = this.props.navigation;
+
     return(
       <View className="plant-index-container">
+        <Button
+          onPress={() => navigate('Form')}
+          title="Create!"
+          />
         <View className="plant-index">
           {this.props.plants.map((plant, idx) => {
             if (idx % 2 == 0) {
