@@ -33,7 +33,7 @@ demo_aeonium = Plant.create!(
   description: "20 cuttings available of this beautiful treelike succulent",
   instructions: "Water once weekly during late-spring/summer, water monthly in winter",
   owner_id: demo.id,
-  img_url: "https://res.cloudinary.com/whasting/image/upload/c_thumb,h_100,w_100,r_50/v1491368806/Aeonium-arboreum-2_zdkqm2.jpg"
+  img_url: "https://res.cloudinary.com/whasting/image/upload/h_175,w_175/v1491368806/Aeonium-arboreum-2_zdkqm2.jpg"
 )
 
 demo_apple = Plant.create!(
@@ -49,7 +49,7 @@ demo_lemons = Plant.create!(
   description: "I have way too many lemons!",
   instructions: "Take the lemons and make some lemonade, donations welcome",
   owner_id: demo.id,
-  img_url: "https://res.cloudinary.com/whasting/image/upload/c_thumb,h_100,w_100,r_50/v1491584479/o-LEMONS-facebook_qbevvw.jpg"
+  img_url: "https://res.cloudinary.com/whasting/image/upload/h_175,w_175/v1491584479/o-LEMONS-facebook_qbevvw.jpg"
 )
 
 demo_mango = Plant.create!(
@@ -65,7 +65,7 @@ title: "Pork and Beans",
 description: "Need to thin out my Pork and Beans plant, all you need is a single bean to get started!",
 instructions: "One roots established, water twice per week",
 owner_id: demo.id,
-img_url: "https://res.cloudinary.com/whasting/image/upload/c_thumb,h_100,w_100,r_50/v1491584457/pork-and-beans-sedum-sedum-rubrotinctum_lmmoni.jpg"
+img_url: "https://res.cloudinary.com/whasting/image/upload/h_175,w_175/v1491584457/pork-and-beans-sedum-sedum-rubrotinctum_lmmoni.jpg"
 )
 
 demo_split = Plant.create!(
@@ -73,7 +73,7 @@ demo_split = Plant.create!(
   description: "This plant has taken over my garden, the cuttings root readily",
   instructions: "Stick directly in the ground and water twice weekly, the plants prefer shade",
   owner_id: demo.id,
-  img_url: "https://res.cloudinary.com/whasting/image/upload/c_thumb,h_100,w_100,r_50/v1491584533/f051db33576073500488793113388682_vo9cwl.jpg"
+  img_url: "https://res.cloudinary.com/whasting/image/upload/h_175,w_175/v1491584533/f051db33576073500488793113388682_vo9cwl.jpg"
 )
 
 demo_spider = Plant.create!(
@@ -81,7 +81,7 @@ demo_spider = Plant.create!(
   description: "The corner stone of indoor plants, come grab some offshoots",
   instructions: "Plant in loamy soil and water once weekly",
   owner_id: demo.id,
-  img_url: "https://res.cloudinary.com/whasting/image/upload/c_thumb,h_100,w_100,r_50/v1491584569/68eb93ea8d7efc05d889cdb78548d2f0_-pinterest-spider-plants-spider-plant_900-651_d2mzai.jpg"
+  img_url: "https://res.cloudinary.com/whasting/image/upload/h_175,w_175/v1491584569/68eb93ea8d7efc05d889cdb78548d2f0_-pinterest-spider-plants-spider-plant_900-651_d2mzai.jpg"
 )
 
 demo_strawberry = Plant.create!(
