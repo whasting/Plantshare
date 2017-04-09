@@ -20,6 +20,7 @@ class Api::PlantsController < ApplicationController
 
   def show
     @plant = Plant.find(params[:id])
+    @plant_requesters = @plant.requesters
     if @plant
       render 'api/plants/show'
     else
