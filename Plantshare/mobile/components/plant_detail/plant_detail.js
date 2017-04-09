@@ -50,7 +50,7 @@ class PlantDetail extends React.Component {
             alignSelf: 'center'}}>
           <Button
             onPress={() => console.log("hello")}
-            color='#66BB6A'
+            color='#4CAF50'
             title='Request'/>
         </View>
         <Text>Description: {plant.description}</Text>
