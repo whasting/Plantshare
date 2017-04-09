@@ -12,6 +12,7 @@
 
 class Request < ApplicationRecord
 	validates :status, inclusion: { in: ["pending", "approved", "denied"]}
+  validates :plant_id, uniqueness: { scope: :user_id }
 
   belongs_to :user
   belongs_to :plant

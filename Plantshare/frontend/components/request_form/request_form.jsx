@@ -50,7 +50,7 @@ class RequestForm extends React.Component {
               onChange={this.update("comment")} />
 
           <div className="request-form-submit">
-            <input type="submit" value={`${this.props.formType} Plant`}/>
+            <input type="submit" value={`${this.props.formType} Request`}/>
           </div>
         </form>
       </div>

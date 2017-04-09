@@ -1,8 +1,10 @@
 import React from 'react';
 import ModalForm from '../modal_form/modal_form';
 import RequestModalForm from '../modal_form/request_modal_form';
+import RequestIndexContainer from '../request_index/request_index_container';
 
 class PlantDetail extends React.Component {
+  
   componentDidMount() {
     this.props.fetchPlant(this.props.params.id);
   }
@@ -30,7 +32,10 @@ class PlantDetail extends React.Component {
         </ul>
 
         {form}
-
+        <br />
+        <div className="request-list">
+          <RequestIndexContainer />
+        </div>
       </div>
     );
   }

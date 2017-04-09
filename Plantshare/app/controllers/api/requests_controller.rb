@@ -2,6 +2,7 @@ class Api::RequestsController < ApplicationController
 
 	def index
 		@requests = current_user.requests.all
+		@requests_by_plant = Request.find_by_plant_id(params[:id])
 		render :index
 	end
 

@@ -11,7 +11,9 @@ const defaultPlant = {
   owner_id: '',
   lat: '',
   lng: '',
-  img_url: ''
+  img_url: '',
+  requests: {},
+  requesters: {}
 };
 
 const PlantDetailReducer = (state=defaultPlant, action) => {
