@@ -2,7 +2,9 @@ import React from 'react';
 import { Link, hashHistory } from 'react-router';
 
 import { connect } from 'react-redux';
-import { fetchPlant, fetchPlants, clearPlant } from '../../actions/plant_actions';
+import { fetchPlant,
+         fetchPlants,
+         clearPlant } from '../../actions/plant_actions';
 
 import PlantDetail from './plant_detail';
 

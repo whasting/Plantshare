@@ -98,7 +98,7 @@ class PlantIndex extends React.Component {
           className="plant-index"
           style={{flex: 1}}>
           {this.props.plants.map((plant, idx) => {
-            if (idx % 2 == 0) {
+            if (idx % 2 === 0) {
               //evens
               backgroundColor = '#E8F5E9';
             } else {
