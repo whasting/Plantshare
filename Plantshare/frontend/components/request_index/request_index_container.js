@@ -1,5 +1,7 @@
 import { connect } from 'react-redux';
-import { fetchRequests } from '../../actions/request_actions';
+import {
+  fetchRequests,
+  updateRequest } from '../../actions/request_actions';
 import RequestIndex from './request_index';
 
 const mapStateToProps = ({plantDetail, session}) => {
@@ -12,7 +14,8 @@ const mapStateToProps = ({plantDetail, session}) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchRequests: (data) => dispatch(fetchRequests(data))
+  fetchRequests: data => dispatch(fetchRequests(data)),
+  updateRequest: request => dispatch(updateRequest(request))
 });
 
 export default connect(

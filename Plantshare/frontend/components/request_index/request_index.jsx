@@ -27,7 +27,9 @@ class RequestIndex extends React.Component {
         <ul className="request-index">
           {this.props.requestItems.map((request) =>
             this.props.requesters.map((requester, idx) =>
-              <RequestIndexItem key={idx} request={request} requester={requester}/>
+              <RequestIndexItem key={idx} request={request}
+                requester={requester}
+                updateRequest={this.props.updateRequest}/>
             ))}
         </ul>
       </div>
