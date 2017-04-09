@@ -8,10 +8,10 @@
 
 User.destroy_all
 
-demo = User.create!(username: "Demo", password: "password")
-wade = User.create!(username: "Wade", password: "password")
-colin = User.create!(username: "Colin", password: "password")
-eddie = User.create!(username: "Eddie", password: "password")
+demo = User.create!(username: "demo", password: "password")
+wade = User.create!(username: "wade", password: "password")
+colin = User.create!(username: "colin", password: "password")
+eddie = User.create!(username: "eddie", password: "password")
 
 # PLANTS
 #  title        :string           not null
