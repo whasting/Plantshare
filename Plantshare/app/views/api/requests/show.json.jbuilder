@@ -1,1 +1,1 @@
-json.extract! @request, :id, :user_id, :plant_id, :comment
+json.extract! @request, :id, :user_id, :plant_id, :comment, :status

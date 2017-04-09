@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170404163845) do
+ActiveRecord::Schema.define(version: 20170408205845) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20170404163845) do
     t.text     "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "status",     null: false
     t.index ["plant_id"], name: "index_requests_on_plant_id", using: :btree
     t.index ["user_id"], name: "index_requests_on_user_id", using: :btree
   end

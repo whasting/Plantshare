@@ -1,5 +1,6 @@
 import React from 'react';
 import ModalForm from '../modal_form/modal_form';
+import RequestModalForm from '../modal_form/request_modal_form';
 
 class PlantDetail extends React.Component {
   componentDidMount() {
@@ -12,7 +13,8 @@ class PlantDetail extends React.Component {
     let form = "";
 
     if(plant){
-      form = this.props.currentUser.id === plant.owner_id ? <ModalForm plant={plant}/> : "";
+      form = this.props.currentUser.id === plant.owner_id ? 
+        <ModalForm plant={plant}/> : <RequestModalForm plantId={plant.id}/>;
     }
 
     return (
