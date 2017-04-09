@@ -1,20 +1,31 @@
-import { connect } from 'react-redux';
-import PlantForm from './plant_form';
-import { createPlant, updatePlant } from '../../actions/plant_actions';
+import React from 'react';
+import { Link, hashHistory } from 'react-router';
 
-const mapStateToProps = ({session}, ownProps) => {
-  let formType = ownProps.plant ? "Update" : "Create";
+import { connect } from 'react-redux';
+import { fetchPlant,
+        createPlant,
+        updatePlant } from '../../actions/plant_actions';
+
+import PlantForm from './plant_form';
+
+const mapStateToProps = ({session, plantDetail}, ownProps) => {
+  let navigation = ownProps.navigation;
+  let formType = navigation.state.params.formType === "Update" ? "Update" : "Create";
+  let plant = plantDetail;
+  let currentUser = session.currentUser;
+
 
   return {
     formType,
-  	plant: ownProps.plant,
-    currentUser: session.currentUser
+    navigation,
+  	plant,
+    currentUser
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-	createPlant: id => dispatch(createPlant(id)),
-	updatePlant: id => dispatch(updatePlant(id))
+	createPlant: plant => dispatch(createPlant(plant)),
+	updatePlant: plant => dispatch(updatePlant(plant))
 });
 
 export default connect(

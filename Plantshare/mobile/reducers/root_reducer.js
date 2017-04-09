@@ -8,8 +8,7 @@ import PlantDetailReducer from './plant_detail_reducer';
 const RootReducer = combineReducers({
   session: SessionReducer,
   plantIndex: PlantIndexReducer,
-  plantDetail: PlantDetailReducer,
-  errors: ErrorReducer
+  plantDetail: PlantDetailReducer
 });
 
 export default RootReducer;

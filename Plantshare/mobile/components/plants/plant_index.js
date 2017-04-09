@@ -9,10 +9,10 @@ import {
   Text,
   Image,
   View,
+  ScrollView,
   Navigator,
   Button,
-  TouchableHighlight,
-  ScrollView
+  TouchableHighlight
 } from 'react-native';
 
 import PlantIndexItem from './plant_index_item';
@@ -69,6 +69,12 @@ class PlantIndex extends React.Component {
 
   render(){
     let backgroundColor;
+    const { navigate } = this.props.navigation;
+    // <Button
+    //   onPress={() => navigate('Form')}
+    //   title="Create!"
+    //   />
+
     return(
       <View
         className="plant-index-container"

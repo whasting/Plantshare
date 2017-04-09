@@ -28,6 +28,9 @@ class PlantDetail extends React.Component {
   render() {
     const plant = this.props.plant;
     let form = "";
+
+    const { navigate } = this.props.navigation;
+
     let plantImg = <Text></Text>;
     if (plant.img_url) {
       plantImg = (
@@ -38,9 +41,15 @@ class PlantDetail extends React.Component {
       );
     }
 
-    // if(plant){
-    //   form = this.props.currentUser.id === plant.owner_id ? <ModalForm plant={plant}/> : "";
-    // }
+    // <Button
+    //    onPress={() => navigate('Index')}
+    //    title="Back to Index!"
+    //  />
+
+    if(plant){
+      const button = (<Button onPress={() => navigate('Form', { plant: plant , formType: "Update"})} title="Edit!" />);
+      form = this.props.currentUser.id === plant.owner_id ? button : <Text></Text>;
+    }
 
     if (Object.keys(plant).length) {
       return (

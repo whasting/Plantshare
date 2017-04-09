@@ -65,10 +65,13 @@ class SessionForm extends React.Component {
 		return (
 			<View>
 				<TextInput
+          placeholder="Username"
 					onChangeText={(username) => this.setState({ username })}
         	value={this.state.username}
 				/>
 				<TextInput
+          placeholder="password"
+          secureTextEntry={true}
 					onChangeText={(password) => this.setState({ password })}
         	value={this.state.password}
 				/>
