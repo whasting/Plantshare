@@ -40,8 +40,22 @@ class PlantIndex extends React.Component {
   // }
 
   handlePress(tabNum) {
-    this.setState({ activeTab: tabNum });
-
+    if (tabNum !== this.state.activeTab) {
+      this.setState({ activeTab: tabNum });
+      let userId = this.props.currentUserId;
+      switch (tabNum) {
+        case 1:
+          return this.props.fetchPlants();
+        case 2:
+          //user_id, idx 2(Listings)
+          return this.props.fetchPlants(userId, tabNum);
+        case 3:
+          //user_id, idx 3(Requests)
+          return this.props.fetchPlants(userId, tabNum);
+        default:
+          return;
+      }
+    }
   }
 
   getTabStyle(tabNum) {

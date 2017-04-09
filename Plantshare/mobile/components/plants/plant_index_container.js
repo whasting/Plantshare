@@ -6,11 +6,12 @@ import PlantIndex from './plant_index';
 const mapStateToProps = ({plantIndex, session}, ownProps) => {
   let plants = Object.keys(plantIndex).map((id) => plantIndex[id]);
   let navigation = ownProps.navigation;
-  return { plants, navigation };
+  let currentUserId = session.currentUser.id;
+  return { plants, navigation, currentUserId };
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchPlants: data => dispatch(fetchPlants(data)),
+  fetchPlants: (data, tabNum) => dispatch(fetchPlants(data, tabNum)),
   clearPlants: plants => dispatch(clearPlants(plants))
 });
 

@@ -33,8 +33,8 @@ export const clearPlants = plants => ({
   plants
 });
 
-export const fetchPlants = (data) => dispatch => (
-  APIUtil.fetchPlants(data)
+export const fetchPlants = (data, tabNum) => dispatch => (
+  APIUtil.fetchPlants(data, tabNum)
     .then(plants => dispatch(receivePlants(plants)))
 );
 
