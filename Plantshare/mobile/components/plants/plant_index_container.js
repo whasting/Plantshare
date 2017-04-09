@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchPlants } from '../../actions/plant_actions';
+import { fetchPlants, clearPlants } from '../../actions/plant_actions';
 import PlantIndex from './plant_index';
 
 const mapStateToProps = ({plantIndex, session}, ownProps) => {
@@ -10,7 +10,8 @@ const mapStateToProps = ({plantIndex, session}, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchPlants: data => dispatch(fetchPlants(data))
+  fetchPlants: data => dispatch(fetchPlants(data)),
+  clearPlants: plants => dispatch(clearPlants(plants))
 });
 
 export default connect(

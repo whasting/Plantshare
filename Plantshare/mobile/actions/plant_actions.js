@@ -4,6 +4,7 @@ export const RECEIVE_PLANTS = "RECEIVE_PLANTS";
 export const RECEIVE_PLANT = "RECEIVE_PLANT";
 export const REMOVE_PLANT = "REMOVE_PLANT";
 export const CLEAR_PLANT = "CLEAR_PLANT";
+export const CLEAR_PLANTS = "CLEAR_PLANTS";
 
 import { hashHistory } from 'react-router';
 
@@ -25,6 +26,11 @@ export const removePlant = (plant) => ({
 export const clearPlant = plant => ({
   type: CLEAR_PLANT,
   plant
+});
+
+export const clearPlants = plants => ({
+  type: CLEAR_PLANTS,
+  plants
 });
 
 export const fetchPlants = (data) => dispatch => (

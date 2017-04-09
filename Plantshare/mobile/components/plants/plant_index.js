@@ -25,12 +25,23 @@ class PlantIndex extends React.Component {
     this.getTabStyle = this.getTabStyle.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.props.fetchPlants();
   }
 
+  componentWillReceiveProps(newProps) {
+    if (this.props.plants !== newProps.plants) {
+      this.props = newProps;
+    }
+  }
+
+  // componentWillUnmount() {
+  //   this.props.clearPlants({});
+  // }
+
   handlePress(tabNum) {
     this.setState({ activeTab: tabNum });
+
   }
 
   getTabStyle(tabNum) {

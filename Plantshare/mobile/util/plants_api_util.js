@@ -10,7 +10,8 @@ export const fetchPlants = (data = null) => {
       }
     }).then(r => r.json());
   } else {
-    return fetch(`http://10.0.2.2:3000/api/plants/`, {
+    // TODO: 
+    return fetch(`http://10.0.2.2:3000/api/listings/`, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
