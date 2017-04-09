@@ -50,7 +50,7 @@ class IndexScreen extends React.Component {
       }
     };
     return (
-      <View>
+      <View style={{flex: 1}}>
         <PlantIndexContainer store={store} navigation={this.props.navigation}/>
       </View>
     );
@@ -73,7 +73,7 @@ class LoginScreen extends React.Component {
 class DetailScreen extends React.Component {
   render() {
     return (
-      <View style={styles.navbar}>
+      <View style={{flex: 1}}>
         <PlantDetailContainer store={store} navigation={this.props.navigation}/>
       </View>
     );
@@ -81,13 +81,41 @@ class DetailScreen extends React.Component {
 }
 
 const AppNavigator = StackNavigator({
-  Home: {
-    screen: HomeScreen,
+  Index: { screen: IndexScreen,
+    Home: {
+      screen: HomeScreen,
+      navigationOptions: {
+        title: 'Plantshare',
+        header: {
+          style: {
+            backgroundColor: '#388E3C'
+          },
+          titleStyle: {
+            color: 'white',
+            alignSelf: 'center'
+          }
+        }
+      }
+    },
+    Login: { screen: LoginScreen,
+      navigationOptions: {
+        title: 'Plantshare',
+        header: {
+          style: {
+            backgroundColor: '#388E3C'
+          },
+          titleStyle: {
+            color: 'white',
+            alignSelf: 'center'
+          }
+        }
+      }
+    },
     navigationOptions: {
       title: 'Plantshare',
       header: {
         style: {
-          backgroundColor: '#4CAF50'
+          backgroundColor: '#388E3C'
         },
         titleStyle: {
           color: 'white',
@@ -96,22 +124,19 @@ const AppNavigator = StackNavigator({
       }
     }
   },
-  Login: { screen: LoginScreen },
-  Index: { screen: IndexScreen,
+  Detail: { screen: DetailScreen,
     navigationOptions: {
-      title: 'Index',
+      title: 'Plantshare',
       header: {
         style: {
-          backgroundColor: '#4CAF50'
+          backgroundColor: '#388E3C'
         },
         titleStyle: {
           color: 'white',
           alignSelf: 'center'
         }
       }
-    }
-  },
-  Detail: { screen: DetailScreen }
+    } }
 });
 
 class App extends React.Component {
