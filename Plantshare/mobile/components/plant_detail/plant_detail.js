@@ -16,7 +16,7 @@ class PlantDetail extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchPlant(this.props.plant.id);
+    this.props.fetchPlant(this.props.plantId);
   }
 
   render() {

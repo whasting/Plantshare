@@ -1,6 +1,6 @@
 'use strict';
 
-import React from 'react';
+import React, { Component } from 'react';
 
 import {
   AppRegistry,
@@ -33,14 +33,6 @@ class HomeScreen extends React.Component {
      <View>
        <Text>Hello, Plantshare!</Text>
        <Button
-         onPress={() => navigate('Index')}
-         title="See Plants"
-       />
-       <Button
-         onPress={() => navigate('Detail')}
-         title="See A Plant"
-       />
-       <Button
           onPress={() => navigate('Login')}
           title="Login Here!"
         />
@@ -59,7 +51,7 @@ class IndexScreen extends React.Component {
     };
     return (
       <View>
-        <PlantIndexContainer store={store} />
+        <PlantIndexContainer store={store} navigation={this.props.navigation}/>
       </View>
     );
   }
@@ -72,7 +64,7 @@ class LoginScreen extends React.Component {
     };
     return (
       <View>
-        <SessionFormContainer store={store} />
+        <SessionFormContainer store={store} navigation={this.props.navigation}/>
       </View>
     );
   }
@@ -82,7 +74,7 @@ class DetailScreen extends React.Component {
   render() {
     return (
       <View style={styles.navbar}>
-        <PlantDetailContainer store={store} />
+        <PlantDetailContainer store={store} navigation={this.props.navigation}/>
       </View>
     );
   }

@@ -12,22 +12,18 @@ class PlantIndexItem extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handlePress = this.handlePress.bind(this);
     this.backgroundColor = this.props.backgroundColor;
-  }
-
-  handlePress() {
-    console.log("HI");
-    console.log(this.props.plant.id);
   }
 
   render() {
     let plant = this.props.plant;
+    const { navigate } = this.props.navigation;
+
     styles.index_item.backgroundColor = this.backgroundColor;
     console.log(styles.index_item);
     return (
       <TouchableHighlight
-        onPress={() => console.log(plant.id)}>
+        onPress={() => navigate('Detail', { plant: plant })}>
         <View
           style={
             [styles.index_item,

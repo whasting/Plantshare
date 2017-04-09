@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import { fetchPlants } from '../../actions/plant_actions';
 import PlantIndex from './plant_index';
 
-const mapStateToProps = ({plantIndex, session}) => {
+const mapStateToProps = ({plantIndex, session}, ownProps) => {
   let plants = Object.keys(plantIndex).map((id) => plantIndex[id]);
-  return { plants };
+  let navigation = ownProps.navigation;
+  return { plants, navigation };
 };
 
 const mapDispatchToProps = dispatch => ({

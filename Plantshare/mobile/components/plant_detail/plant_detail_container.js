@@ -6,11 +6,13 @@ import { fetchPlant, fetchPlants } from '../../actions/plant_actions';
 
 import PlantDetail from './plant_detail';
 
-const mapStateToProps = ( { plantDetail, session }) => {
+const mapStateToProps = ( { plantDetail, session }, ownProps) => {
+  let navigation = ownProps.navigation;
+  let plantId = navigation.state.params.plant.id;
   let plant = plantDetail;
   let currentUser = session.currentUser;
 
-  return { plant, currentUser };
+  return { plant, currentUser, plantId, navigation };
 };
 
 const mapDispatchToProps = dispatch => ({
