@@ -21,8 +21,11 @@ class SessionForm extends React.Component {
 		this.handleSignup = this.handleSignup.bind(this);
 	}
 
-	componentDidUpdate() {
-		this.redirectIfLoggedIn();
+	componentWillReceiveProps(nextProps) {
+    const { navigate } = this.props.navigation;
+		if(nextProps.loggedIn){
+      navigate('Index');
+    }
 	}
 
 	redirectIfLoggedIn() {
@@ -58,6 +61,7 @@ class SessionForm extends React.Component {
 	}
 
 	render() {
+    const { navigate } = this.props.navigation;
 		return (
 			<View>
 				<TextInput
@@ -68,8 +72,8 @@ class SessionForm extends React.Component {
 					onChangeText={(password) => this.setState({ password })}
         	value={this.state.password}
 				/>
-				<Button onPress={this.handleLogin}  title="Login Here!"/>
-				<Button onPress={this.handleSignup}  title="Signup Here!"/>
+				<Button onPress={this.handleLogin}  title="Login!"/>
+				<Button onPress={this.handleSignup}  title="Sign Up!"/>
 			</View>
 		);
 	}

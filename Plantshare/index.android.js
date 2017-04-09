@@ -1,6 +1,6 @@
 'use strict';
 
-import React from 'react';
+import React, { Component } from 'react';
 
 import {
   AppRegistry,
@@ -33,14 +33,6 @@ class HomeScreen extends React.Component {
      <View>
        <Text>Hello, Plantshare!</Text>
        <Button
-         onPress={() => navigate('Index')}
-         title="See Plants"
-       />
-       <Button
-         onPress={() => navigate('Detail')}
-         title="See A Plant"
-       />
-       <Button
           onPress={() => navigate('Login')}
           title="Login Here!"
         />
@@ -58,8 +50,8 @@ class IndexScreen extends React.Component {
       }
     };
     return (
-      <View>
-        <PlantIndexContainer store={store} />
+      <View style={{flex: 1}}>
+        <PlantIndexContainer store={store} navigation={this.props.navigation}/>
       </View>
     );
   }
@@ -72,7 +64,7 @@ class LoginScreen extends React.Component {
     };
     return (
       <View>
-        <SessionFormContainer store={store} />
+        <SessionFormContainer store={store} navigation={this.props.navigation}/>
       </View>
     );
   }
@@ -81,8 +73,8 @@ class LoginScreen extends React.Component {
 class DetailScreen extends React.Component {
   render() {
     return (
-      <View style={styles.navbar}>
-        <PlantDetailContainer store={store} />
+      <View style={{flex: 1}}>
+        <PlantDetailContainer store={store} navigation={this.props.navigation}/>
       </View>
     );
   }
@@ -91,10 +83,10 @@ class DetailScreen extends React.Component {
 const AppNavigator = StackNavigator({
   Index: { screen: IndexScreen,
     navigationOptions: {
-      title: 'Index',
+      title: 'Plantshare',
       header: {
         style: {
-          backgroundColor: '#4CAF50'
+          backgroundColor: '#388E3C'
         },
         titleStyle: {
           color: 'white',
@@ -109,7 +101,7 @@ const AppNavigator = StackNavigator({
       title: 'Plantshare',
       header: {
         style: {
-          backgroundColor: '#4CAF50'
+          backgroundColor: '#388E3C'
         },
         titleStyle: {
           color: 'white',
@@ -119,7 +111,19 @@ const AppNavigator = StackNavigator({
     }
   },
   Login: { screen: LoginScreen },
-  Detail: { screen: DetailScreen }
+  Detail: { screen: DetailScreen,
+    navigationOptions: {
+      title: 'Plantshare',
+      header: {
+        style: {
+          backgroundColor: '#388E3C'
+        },
+        titleStyle: {
+          color: 'white',
+          alignSelf: 'center'
+        }
+      }
+    } }
 });
 
 class App extends React.Component {
