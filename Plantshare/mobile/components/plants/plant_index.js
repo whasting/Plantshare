@@ -50,7 +50,7 @@ class PlantIndex extends React.Component {
           <View
             className="plant-index-tabs"
             style={{
-              flex: 0.1,
+              height: 65,
               justifyContent: 'space-around',
               flexDirection: 'row'}}>
             <TouchableHighlight

@@ -45,17 +45,19 @@ class PlantDetail extends React.Component {
         </Text>
         {plantImg}
         <View
-          style={{
-            width: 150,
-            alignSelf: 'center'}}>
+          style={styles.requestButton}>
           <Button
             onPress={() => console.log("hello")}
             color='#4CAF50'
             title='Request'/>
         </View>
         <View style={styles.textContainer}>
-          <Text>Description: {plant.description}</Text>
-          <Text>Care Instruction: {plant.instructions}</Text>
+          <Text style={styles.descriptionTitle}>Description:</Text>
+          <Text style={styles.descriptionText}>{plant.description}</Text>
+        </View>
+        <View style={styles.textContainer}>
+          <Text style={styles.careTitle}>Care:</Text>
+          <Text style={styles.careText}>{plant.instructions}</Text>
         </View>
       </View>
     );
@@ -86,8 +88,27 @@ const styles = StyleSheet.create({
   textContainer: {
     marginTop: 15,
     marginBottom: 10,
-    marginRight: 25,
-    marginLeft: 25
+    marginRight: 45,
+    marginLeft: 45
+  },
+  requestButton: {
+    width: 150,
+    alignSelf: 'center',
+    marginBottom: 15
+  },
+  descriptionTitle: {
+    fontSize: 24,
+    fontWeight: 'bold'
+  },
+  descriptionText: {
+    fontSize: 20
+  },
+  careTitle: {
+    fontSize: 24,
+    fontWeight: 'bold'
+  },
+  careText: {
+    fontSize: 20
   }
 });
 

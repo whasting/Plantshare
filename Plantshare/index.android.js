@@ -183,8 +183,7 @@ const styles = StyleSheet.create({
   splashText: {
     color: 'white',
     alignSelf: 'center',
-    fontSize: 36,
-    fontFamily: 'Grand Hotel'
+    fontSize: 36
   }
 });
 
