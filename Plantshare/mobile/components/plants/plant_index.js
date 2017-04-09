@@ -11,7 +11,8 @@ import {
   View,
   Navigator,
   Button,
-  TouchableHighlight
+  TouchableHighlight,
+  ScrollView
 } from 'react-native';
 
 import PlantIndexItem from './plant_index_item';
@@ -72,28 +73,29 @@ class PlantIndex extends React.Component {
       <View
         className="plant-index-container"
         style={{flex: 1}}>
-          <View
-            className="plant-index-tabs"
-            style={{
-              height: 65,
-              justifyContent: 'space-around',
-              flexDirection: 'row'}}>
-            <TouchableHighlight
-              style={this.getTabStyle(1)}
-              onPress={() => this.handlePress(1)}>
-              <Text style={styles.tabText}>Plants</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              style={this.getTabStyle(2)}
-              onPress={() => this.handlePress(2)}>
-              <Text style={styles.tabText}>Listings</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              style={this.getTabStyle(3)}
-              onPress={() => this.handlePress(3)}>
-              <Text style={styles.tabText}>Requests</Text>
-            </TouchableHighlight>
-          </View>
+        <View
+          className="plant-index-tabs"
+          style={{
+            height: 65,
+            justifyContent: 'space-around',
+            flexDirection: 'row'}}>
+          <TouchableHighlight
+            style={this.getTabStyle(1)}
+            onPress={() => this.handlePress(1)}>
+            <Text style={styles.tabText}>Plants</Text>
+          </TouchableHighlight>
+          <TouchableHighlight
+            style={this.getTabStyle(2)}
+            onPress={() => this.handlePress(2)}>
+            <Text style={styles.tabText}>Listings</Text>
+          </TouchableHighlight>
+          <TouchableHighlight
+            style={this.getTabStyle(3)}
+            onPress={() => this.handlePress(3)}>
+            <Text style={styles.tabText}>Requests</Text>
+          </TouchableHighlight>
+        </View>
+        <ScrollView>
         <View
           className="plant-index"
           style={{flex: 1}}>
@@ -116,6 +118,7 @@ class PlantIndex extends React.Component {
             }
           )}
         </View>
+      </ScrollView>
       </View>
     );
   }

@@ -8,7 +8,8 @@ import {
   Image,
   Navigator,
   Button,
-  TouchableHighlight
+  TouchableHighlight,
+  ScrollView
 } from 'react-native';
 
 class PlantDetail extends React.Component {
@@ -43,28 +44,30 @@ class PlantDetail extends React.Component {
 
     if (Object.keys(plant).length) {
       return (
-        <View style={styles.container}>
-          <Text
-            style={styles.title}>
-            {plant.title}
-          </Text>
-          {plantImg}
-          <View
-            style={styles.requestButton}>
-            <Button
-              onPress={() => console.log("hello")}
-              color='#4CAF50'
-              title='Request'/>
+        <ScrollView style={styles.container}>
+          <View style={styles.container}>
+            <Text
+              style={styles.title}>
+              {plant.title}
+            </Text>
+            {plantImg}
+            <View
+              style={styles.requestButton}>
+              <Button
+                onPress={() => console.log("hello")}
+                color='#4CAF50'
+                title='Request'/>
+            </View>
+            <View style={styles.textContainer}>
+              <Text style={styles.descriptionTitle}>Info:</Text>
+              <Text style={styles.descriptionText}>{plant.description}</Text>
+            </View>
+            <View style={styles.textContainer}>
+              <Text style={styles.careTitle}>Care:</Text>
+              <Text style={styles.careText}>{plant.instructions}</Text>
+            </View>
           </View>
-          <View style={styles.textContainer}>
-            <Text style={styles.descriptionTitle}>Info:</Text>
-            <Text style={styles.descriptionText}>{plant.description}</Text>
-          </View>
-          <View style={styles.textContainer}>
-            <Text style={styles.careTitle}>Care:</Text>
-            <Text style={styles.careText}>{plant.instructions}</Text>
-          </View>
-        </View>
+        </ScrollView>
       );
     } else {
       return <Text></Text>;
