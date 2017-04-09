@@ -10,7 +10,7 @@ const mapStateToProps = ({plantIndex, session}, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchPlants: () => dispatch(fetchPlants())
+  fetchPlants: data => dispatch(fetchPlants(data))
 });
 
 export default connect(
