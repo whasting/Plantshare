@@ -81,36 +81,36 @@ class DetailScreen extends React.Component {
 }
 
 const AppNavigator = StackNavigator({
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: {
+      title: 'Plantshare',
+      header: {
+        style: {
+          backgroundColor: '#388E3C'
+        },
+        titleStyle: {
+          color: 'white',
+          alignSelf: 'center'
+        }
+      }
+    }
+  },
+  Login: { screen: LoginScreen,
+    navigationOptions: {
+      title: 'Plantshare',
+      header: {
+        style: {
+          backgroundColor: '#388E3C'
+        },
+        titleStyle: {
+          color: 'white',
+          alignSelf: 'center'
+        }
+      }
+    }
+  },
   Index: { screen: IndexScreen,
-    Home: {
-      screen: HomeScreen,
-      navigationOptions: {
-        title: 'Plantshare',
-        header: {
-          style: {
-            backgroundColor: '#388E3C'
-          },
-          titleStyle: {
-            color: 'white',
-            alignSelf: 'center'
-          }
-        }
-      }
-    },
-    Login: { screen: LoginScreen,
-      navigationOptions: {
-        title: 'Plantshare',
-        header: {
-          style: {
-            backgroundColor: '#388E3C'
-          },
-          titleStyle: {
-            color: 'white',
-            alignSelf: 'center'
-          }
-        }
-      }
-    },
     navigationOptions: {
       title: 'Plantshare',
       header: {
