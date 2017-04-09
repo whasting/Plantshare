@@ -22,8 +22,8 @@ export const removePlant = (plant) => ({
   plant
 });
 
-export const fetchPlants = () => dispatch => (
-  APIUtil.fetchPlants()
+export const fetchPlants = (data) => dispatch => (
+  APIUtil.fetchPlants(data)
     .then(plants => dispatch(receivePlants(plants)))
 );
 
