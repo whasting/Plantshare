@@ -3,7 +3,7 @@ import * as APIUtil from '../util/plants_api_util';
 export const RECEIVE_PLANTS = "RECEIVE_PLANTS";
 export const RECEIVE_PLANT = "RECEIVE_PLANT";
 export const REMOVE_PLANT = "REMOVE_PLANT";
-
+export const CLEAR_PLANT = "CLEAR_PLANT";
 
 import { hashHistory } from 'react-router';
 
@@ -19,6 +19,11 @@ export const receivePlant = (plant) => ({
 
 export const removePlant = (plant) => ({
   type: REMOVE_PLANT,
+  plant
+});
+
+export const clearPlant = plant => ({
+  type: CLEAR_PLANT,
   plant
 });
 

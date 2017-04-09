@@ -20,10 +20,14 @@ class PlantDetail extends React.Component {
     this.props.fetchPlant(this.props.plantId);
   }
 
+  componentWillUnmount() {
+    this.props.clearPlant({});
+  }
+
   render() {
     const plant = this.props.plant;
     let form = "";
-    let plantImg = <Text>""</Text>;
+    let plantImg = <Text></Text>;
     if (plant.img_url) {
       plantImg = (
         <Image
@@ -37,30 +41,34 @@ class PlantDetail extends React.Component {
     //   form = this.props.currentUser.id === plant.owner_id ? <ModalForm plant={plant}/> : "";
     // }
 
-    return (
-      <View style={styles.container}>
-        <Text
-          style={styles.title}>
-          {plant.title}
-        </Text>
-        {plantImg}
-        <View
-          style={styles.requestButton}>
-          <Button
-            onPress={() => console.log("hello")}
-            color='#4CAF50'
-            title='Request'/>
+    if (Object.keys(plant).length) {
+      return (
+        <View style={styles.container}>
+          <Text
+            style={styles.title}>
+            {plant.title}
+          </Text>
+          {plantImg}
+          <View
+            style={styles.requestButton}>
+            <Button
+              onPress={() => console.log("hello")}
+              color='#4CAF50'
+              title='Request'/>
+          </View>
+          <View style={styles.textContainer}>
+            <Text style={styles.descriptionTitle}>Info:</Text>
+            <Text style={styles.descriptionText}>{plant.description}</Text>
+          </View>
+          <View style={styles.textContainer}>
+            <Text style={styles.careTitle}>Care:</Text>
+            <Text style={styles.careText}>{plant.instructions}</Text>
+          </View>
         </View>
-        <View style={styles.textContainer}>
-          <Text style={styles.descriptionTitle}>Description:</Text>
-          <Text style={styles.descriptionText}>{plant.description}</Text>
-        </View>
-        <View style={styles.textContainer}>
-          <Text style={styles.careTitle}>Care:</Text>
-          <Text style={styles.careText}>{plant.instructions}</Text>
-        </View>
-      </View>
-    );
+      );
+    } else {
+      return <Text></Text>;
+    }
   }
 }
 
@@ -88,13 +96,14 @@ const styles = StyleSheet.create({
   textContainer: {
     marginTop: 15,
     marginBottom: 10,
-    marginRight: 45,
-    marginLeft: 45
+    marginRight: 38,
+    marginLeft: 38
   },
   requestButton: {
     width: 150,
     alignSelf: 'center',
-    marginBottom: 15
+    marginBottom: 15,
+    marginTop: 15
   },
   descriptionTitle: {
     fontSize: 24,
