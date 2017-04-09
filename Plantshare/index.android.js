@@ -9,6 +9,7 @@ import {
   View,
   Navigator,
   Button,
+  Image,
   TouchableHighlight
 } from 'react-native';
 
@@ -31,12 +32,34 @@ class HomeScreen extends React.Component {
  render() {
    const { navigate } = this.props.navigation;
    return (
-     <View>
-       <Text>Hello, Plantshare!</Text>
-       <Button
-          onPress={() => navigate('Login')}
-          title="Login Here!"
-        />
+     <View style={styles.splash}>
+       <Image
+         style={styles.splashImage}
+         source={{uri: 'http://i.imgur.com/gVsGBmq.jpg'}}>
+         <Image
+           style={{
+             height: 75,
+             width: 300,
+             top: -150,
+             marginBottom: 15
+           }}
+           source={{uri: 'http://res.cloudinary.com/whasting/image/upload/v1491759462/logo_ewrsbw.png'}} />
+         <View style={{
+             width: 250,
+             height: 40,
+             top: -75,
+             alignSelf: 'center',
+             borderColor: '#004D40',
+             borderWidth: 3,
+             borderRadius: 5
+           }}>
+           <Button
+              onPress={() => navigate('Login')}
+              color='#43A047'
+              title="Get Started"
+            />
+          </View>
+      </Image>
      </View>
    );
  }
@@ -44,14 +67,8 @@ class HomeScreen extends React.Component {
 
 class IndexScreen extends React.Component {
   render() {
-    const navigationOptions = {
-      title: 'Plants',
-      tintColor: {
-        backgroundColor:'white'
-      }
-    };
     return (
-      <View>
+      <View style={{flex: 1}}>
         <PlantIndexContainer store={store} navigation={this.props.navigation}/>
       </View>
     );
@@ -74,7 +91,7 @@ class LoginScreen extends React.Component {
 class DetailScreen extends React.Component {
   render() {
     return (
-      <View style={styles.navbar}>
+      <View style={{flex: 1}}>
         <PlantDetailContainer store={store} navigation={this.props.navigation}/>
       </View>
     );
@@ -98,7 +115,7 @@ const AppNavigator = StackNavigator({
       title: 'Plantshare',
       header: {
         style: {
-          backgroundColor: '#4CAF50'
+          height: 0
         },
         titleStyle: {
           color: 'white',
@@ -107,13 +124,26 @@ const AppNavigator = StackNavigator({
       }
     }
   },
-  Login: { screen: LoginScreen },
-  Index: { screen: IndexScreen,
+  Login: { screen: LoginScreen,
     navigationOptions: {
-      title: 'Index',
+      title: 'Plantshare',
       header: {
         style: {
-          backgroundColor: '#4CAF50'
+          backgroundColor: '#2E7D32'
+        },
+        titleStyle: {
+          color: 'white',
+          alignSelf: 'center'
+        }
+      }
+    }
+  },
+  Index: { screen: IndexScreen,
+    navigationOptions: {
+      title: 'Plantshare',
+      header: {
+        style: {
+          backgroundColor: '#2E7D32'
         },
         titleStyle: {
           color: 'white',
@@ -123,7 +153,20 @@ const AppNavigator = StackNavigator({
     }
   },
   Form: { screen: PlantFormScreen },
-  Detail: { screen: DetailScreen }
+  Detail: { screen: DetailScreen,
+    navigationOptions: {
+      title: 'Plantshare',
+      header: {
+        style: {
+          backgroundColor: '#2E7D32'
+        },
+        titleStyle: {
+          color: 'white',
+          alignSelf: 'center'
+        }
+      }
+    }
+  }
 });
 
 class App extends React.Component {
@@ -139,13 +182,21 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
   },
-  hello: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  splash: {
+    flex: 1
+  },
+  splashImage: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   navbar: {
     backgroundColor: 'white'
+  },
+  splashText: {
+    color: 'white',
+    alignSelf: 'center',
+    fontSize: 36
   }
 });
 
