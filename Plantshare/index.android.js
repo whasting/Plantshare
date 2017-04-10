@@ -37,29 +37,24 @@ class HomeScreen extends React.Component {
        <Image
          style={styles.splashImage}
          source={{uri: 'http://i.imgur.com/gVsGBmq.jpg'}}>
-         <Image
-           style={{
-             height: 75,
-             width: 300,
-             top: -150,
-             marginBottom: 15
-           }}
-           source={{uri: 'http://res.cloudinary.com/whasting/image/upload/v1491759462/logo_ewrsbw.png'}} />
-         <View style={{
-             width: 250,
-             height: 40,
-             top: -75,
-             alignSelf: 'center',
-             borderColor: '#004D40',
-             borderWidth: 3,
-             borderRadius: 5
-           }}>
-           <Button
-              onPress={() => navigate('Login')}
-              color='#43A047'
-              title="Get Started"
-            />
-          </View>
+         <View style={styles.layer}>
+           <Image
+             style={{
+               height: 75,
+               width: 300,
+               top: -150,
+               marginBottom: 15
+             }}
+             source={{uri: 'http://res.cloudinary.com/whasting/image/upload/v1491759462/logo_ewrsbw.png'}} />
+           <View style={{
+               width: 250,
+               height: 100,
+               top: -100,
+               alignSelf: 'center'
+             }}>
+             <SessionFormContainer store={store} navigation={this.props.navigation}/>
+            </View>
+        </View>
       </Image>
      </View>
    );
@@ -78,11 +73,8 @@ class IndexScreen extends React.Component {
 
 class LoginScreen extends React.Component {
   render() {
-    const navigationOptions = {
-      title: 'Login',
-    };
     return (
-      <View>
+      <View style={{flex: 1}}>
         <SessionFormContainer store={store} navigation={this.props.navigation}/>
       </View>
     );
@@ -197,10 +189,15 @@ const styles = StyleSheet.create({
   splash: {
     flex: 1
   },
-  splashImage: {
+  layer: {
     flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  splashImage: {
+    flex: 1,
+    resizeMode: 'cover',
   },
   navbar: {
     backgroundColor: 'white'

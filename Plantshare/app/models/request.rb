@@ -8,6 +8,7 @@
 #  comment    :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  status     :string           default("pending"), not null
 #
 
 class Request < ApplicationRecord

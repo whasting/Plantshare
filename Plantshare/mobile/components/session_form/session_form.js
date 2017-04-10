@@ -19,6 +19,7 @@ class SessionForm extends React.Component {
 		this.state = { username: "", password: "" };
 		this.handleLogin = this.handleLogin.bind(this);
 		this.handleSignup = this.handleSignup.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -60,27 +61,112 @@ class SessionForm extends React.Component {
 		}
 	}
 
+  handleDemo() {
+    const demoUsername = ['d', 'e', 'm', 'o'];
+    const demoPassword = ['p', 'a', 's', 's', 'w', 'o', 'r', 'd'];
+    let usernameFill = "";
+    let passwordFill = "";
+    let i = 0;
+
+    let userFill = setInterval(() => {
+      usernameFill += demoUsername[i];
+      i++;
+      this.setState({username: usernameFill});
+
+      if (demoUsername.length === i) {
+        clearInterval(userFill);
+        i = 0;
+
+        let passFill = setInterval(() => {
+          passwordFill += demoPassword[i];
+          i++;
+          this.setState({password: passwordFill});
+
+          if (demoPassword.length === i) {
+            const user = this.state;
+            setTimeout(() => this.props.login(user), 120);
+            clearInterval(passFill);
+          }
+        }, 50);
+      }
+    }, 75);
+  }
+
 	render() {
     const { navigate } = this.props.navigation;
 		return (
-			<View>
+			<View style={{flex: 1}}>
 				<TextInput
           placeholder="Username"
+          style={styles.textFields}
+          underlineColorAndroid='rgba(0,0,0,0)'
 					onChangeText={(username) => this.setState({ username })}
         	value={this.state.username}
 				/>
+        <Text></Text>
 				<TextInput
-          placeholder="password"
+          placeholder="Password"
+          style={styles.textFields}
+          underlineColorAndroid='rgba(0,0,0,0)'
           secureTextEntry={true}
 					onChangeText={(password) => this.setState({ password })}
         	value={this.state.password}
 				/>
-				<Button onPress={this.handleLogin}  title="Login!"/>
-				<Button onPress={this.handleSignup}  title="Sign Up!"/>
+        <View style={styles.loginSignup}>
+          <View style={styles.buttonBorder}>
+      			<Button
+              onPress={this.handleLogin}
+              title="Login"/>
+          </View>
+          <View style={styles.buttonBorder}>
+      			<Button
+              onPress={this.handleSignup}
+              title="Sign Up"
+              color='purple'/>
+          </View>
+        </View>
+        <View style={styles.demoButton}>
+          <Button
+            onPress={this.handleDemo}
+            title="Demo"
+            color='#4CAF50'/>
+        </View>
 			</View>
 		);
 	}
-
 }
+
+const styles = StyleSheet.create({
+  textFields: {
+    height: 40,
+    backgroundColor: 'white',
+    borderWidth: 1,
+    borderColor: 'black',
+    borderRadius: 10,
+    fontSize: 16
+  },
+  loginSignup: {
+    flex: 0,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 15,
+    flexDirection: 'row'
+  },
+  demoButton: {
+    marginTop: 30,
+    borderBottomWidth: 3,
+    borderBottomColor: 'black',
+    borderRightWidth: 3,
+    borderRightColor: 'black'
+  },
+  buttonBorder: {
+    flex: 1,
+    marginRight: 4,
+    borderBottomWidth: 3,
+    borderBottomColor: 'black',
+    borderRightWidth: 3,
+    borderRightColor: 'black'
+  }
+});
 
 export default SessionForm;
