@@ -22,6 +22,7 @@ import { Provider } from 'react-redux';
 import PlantIndexContainer from './mobile/components/plants/plant_index_container';
 import PlantDetailContainer from './mobile/components/plant_detail/plant_detail_container';
 import PlantFormContainer from './mobile/components/plant_form/plant_form_container';
+import RequestFormContainer from './mobile/components/request_form/request_form_container';
 import SessionFormContainer from './mobile/components/session_form/session_form_container';
 
 import configureStore from './mobile/store/store';
@@ -108,6 +109,16 @@ class PlantFormScreen extends React.Component {
   }
 }
 
+class RequestFormScreen extends React.Component {
+  render() {
+    return (
+      <View style={styles.navbar}>
+        <RequestFormContainer store={store} navigation={this.props.navigation}/>
+      </View>
+    );
+  }
+}
+
 const AppNavigator = StackNavigator({
   Home: {
     screen: HomeScreen,
@@ -153,6 +164,7 @@ const AppNavigator = StackNavigator({
     }
   },
   Form: { screen: PlantFormScreen },
+  RequestForm: { screen: RequestFormScreen },
   Detail: { screen: DetailScreen,
     navigationOptions: {
       title: 'Plantshare',
