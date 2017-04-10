@@ -47,9 +47,11 @@ class PlantForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const plant = this.state;
+    const { navigate } = this.props.navigation;
 
     if(this.props.formType === "Update"){
       this.props.updatePlant( plant );
+      navigate("Detail",  {plant});
     } else {
       plant.owner_id = this.props.currentUser.id;
       this.props.createPlant( plant );

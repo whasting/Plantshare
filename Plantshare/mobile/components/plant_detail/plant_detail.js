@@ -12,6 +12,8 @@ import {
   ScrollView
 } from 'react-native';
 
+
+
 class PlantDetail extends React.Component {
   constructor(props){
     super(props);
@@ -28,6 +30,21 @@ class PlantDetail extends React.Component {
   render() {
     const plant = this.props.plant;
     let form = "";
+
+    let plant_requesters = <View></View>;
+
+    if(plant.requesters){
+
+      let requesters = Object.keys(plant.requesters).map((id) => plant.requesters[id]);
+
+      plant_requesters = (<View>
+        {requesters.map((requester) => (
+          <View style={styles.textContainer}>
+            <Text style={styles.descriptionTitle}>Requester: {requester.username}</Text>
+          </View>
+        ))}
+      </View>);
+    }
 
     const { navigate } = this.props.navigation;
 
@@ -47,8 +64,22 @@ class PlantDetail extends React.Component {
     //  />
 
     if(plant){
-      const button = (<Button onPress={() => navigate('Form', { plant: plant , formType: "Update"})} title="Edit!" />);
-      form = this.props.currentUser.id === plant.owner_id ? button : <Text></Text>;
+      const editButton = (
+        <Button
+          onPress={() => navigate('Form', { plant: plant , formType: "Update"})}
+          color='#4CAF50'
+          title="Edit!" />
+      );
+
+      const requestButton = (
+        <Button
+          onPress={() => navigate('RequestForm', { plant: plant })}
+          color='#4CAF50'
+          title='Request'/>
+      );
+
+
+      form = this.props.currentUser.id === plant.owner_id ? editButton : requestButton;
     }
 
     if (Object.keys(plant).length) {
@@ -62,10 +93,7 @@ class PlantDetail extends React.Component {
             {plantImg}
             <View
               style={styles.requestButton}>
-              <Button
-                onPress={() => console.log("hello")}
-                color='#4CAF50'
-                title='Request'/>
+              {form}
             </View>
             <View style={styles.textContainer}>
               <Text style={styles.descriptionTitle}>Info:</Text>
@@ -75,6 +103,7 @@ class PlantDetail extends React.Component {
               <Text style={styles.careTitle}>Care:</Text>
               <Text style={styles.careText}>{plant.instructions}</Text>
             </View>
+            {plant_requesters}
           </View>
         </ScrollView>
       );
