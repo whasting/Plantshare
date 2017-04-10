@@ -1,7 +1,9 @@
 import * as APIUtil from '../util/plants_api_util';
+import * as APIRequestUtil from '../util/requests_api_util';
 
 export const RECEIVE_PLANTS = "RECEIVE_PLANTS";
 export const RECEIVE_PLANT = "RECEIVE_PLANT";
+export const RECEIVE_REQUEST = "RECEIVE_REQUEST";
 export const REMOVE_PLANT = "REMOVE_PLANT";
 export const CLEAR_PLANT = "CLEAR_PLANT";
 export const CLEAR_PLANTS = "CLEAR_PLANTS";
@@ -16,6 +18,11 @@ export const receivePlants = (plants) => ({
 export const receivePlant = (plant) => ({
   type: RECEIVE_PLANT,
   plant
+});
+
+export const receiveRequest = (request) => ({
+  type: RECEIVE_REQUEST,
+  request
 });
 
 export const removePlant = (plant) => ({
@@ -46,6 +53,11 @@ export const fetchPlant = (id) => dispatch => (
 export const createPlant = (plant) => dispatch => (
   APIUtil.createPlant(plant)
     .then(_plant => dispatch(receivePlant(_plant)))
+);
+
+export const createRequest = (request) => dispatch => (
+  APIRequestUtil.createRequest(request)
+    .then(_request => dispatch(receiveRequest(_request)))
 );
 
 export const updatePlant = (plant) => dispatch => (
