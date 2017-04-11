@@ -104,7 +104,7 @@ class PlantFormScreen extends React.Component {
 class RequestFormScreen extends React.Component {
   render() {
     return (
-      <View style={styles.navbar}>
+      <View style={styles.requestForm}>
         <RequestFormContainer store={store} navigation={this.props.navigation}/>
       </View>
     );
@@ -156,7 +156,21 @@ const AppNavigator = StackNavigator({
     }
   },
   Form: { screen: PlantFormScreen },
-  RequestForm: { screen: RequestFormScreen },
+  RequestForm: {
+    screen: RequestFormScreen,
+    navigationOptions: {
+      title: 'Plantshare',
+      header: {
+        style: {
+          backgroundColor: '#2E7D32'
+        },
+        titleStyle: {
+          color: 'white',
+          alignSelf: 'center'
+        }
+      }
+    }
+  },
   Detail: { screen: DetailScreen,
     navigationOptions: {
       title: 'Plantshare',
@@ -199,8 +213,9 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: 'cover',
   },
-  navbar: {
-    backgroundColor: 'white'
+  requestForm: {
+    flex: 1,
+    backgroundColor: '#E8F5E9'
   },
   splashText: {
     color: 'white',

@@ -31,20 +31,21 @@ class PlantDetail extends React.Component {
     const plant = this.props.plant;
     let form = "";
 
-    let plant_requesters = <View></View>;
-
-    if(plant.requesters){
-
-      let requesters = Object.keys(plant.requesters).map((id) => plant.requesters[id]);
-
-      plant_requesters = (<View>
-        {requesters.map((requester) => (
-          <View style={styles.textContainer}>
-            <Text style={styles.descriptionTitle}>Requester: {requester.username}</Text>
-          </View>
-        ))}
-      </View>);
-    }
+    let plantRequests = <View></View>;
+    // if (plant.requests) {
+    //   plantRequests = plant.requests.map(request => {
+    //
+    //     return (
+    //       <View key={request.id} style={styles.textContainer}>
+    //         <Text
+    //           style={styles.descriptionTitle}>
+    //
+    //           User: {request.user_id}
+    //         </Text>
+    //       </View>
+    //     );
+    //   });
+    // }
 
     const { navigate } = this.props.navigation;
 
@@ -67,8 +68,8 @@ class PlantDetail extends React.Component {
       const editButton = (
         <Button
           onPress={() => navigate('Form', { plant: plant , formType: "Update"})}
-          color='#4CAF50'
-          title="Edit!" />
+          color='#FF9800'
+          title="Edit" />
       );
 
       const requestButton = (
@@ -103,7 +104,7 @@ class PlantDetail extends React.Component {
               <Text style={styles.careTitle}>Care:</Text>
               <Text style={styles.careText}>{plant.instructions}</Text>
             </View>
-            {plant_requesters}
+            {plantRequests}
           </View>
         </ScrollView>
       );

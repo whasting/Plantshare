@@ -19,6 +19,16 @@ class PlantIndexItem extends React.Component {
     let plant = this.props.plant;
     const { navigate } = this.props.navigation;
 
+    let user = <Text></Text>;
+    if (plant.user) {
+      let username = plant.user.username;
+      user = (
+      <Text style={styles.index_item_text}>
+        Created by {username.charAt(0).toUpperCase() + username.slice(1)}
+      </Text>
+      );
+    }
+
     styles.index_item.backgroundColor = this.backgroundColor;
     return (
       <TouchableHighlight
@@ -32,8 +42,9 @@ class PlantIndexItem extends React.Component {
             <Text style={styles.index_item_title}>
               {plant.title}
             </Text>
+            {user}
             <Text style={styles.index_item_text}>
-              Blah, blah, username?
+              {plant.request_ids.length} requests
             </Text>
           </View>
           <Image
