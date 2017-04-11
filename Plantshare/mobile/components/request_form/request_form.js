@@ -43,19 +43,53 @@ class RequestForm extends React.Component {
   render() {
     // debugger;
     return (
-      <View>
+      <View style={styles.container}>
+        <Text style={styles.requestTitle}>
+          Request Plant
+        </Text>
 				<TextInput
-          placeholder="Brief description"
+          placeholder="Comment"
 					onChangeText={(comment) => this.setState({ comment })}
         	value={this.state.comment}
           multiline = {true}
           numberOfLines = {4}
+          style={styles.commentBox}
 				/>
-        <Button onPress={this.handleSubmit}  title="create!"/>
+      <View style={styles.submitButton}>
+          <Button
+            onPress={this.handleSubmit}
+            title="Submit"
+            color="#4CAF50"/>
+        </View>
 			</View>
 
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#E8F5E9'
+  },
+  requestTitle: {
+    marginTop: 10,
+    fontSize: 24,
+    fontWeight: 'bold',
+    alignSelf: 'center'
+  },
+  commentBox: {
+    backgroundColor: 'white',
+    fontSize: 18,
+    borderColor: 'transparent',
+    borderWidth: 1,
+    borderRadius: 10,
+    margin: 20,
+    textAlign: 'center'
+  },
+  submitButton: {
+    width: 150,
+    alignSelf: 'center'
+  }
+});
 
 export default RequestForm;
