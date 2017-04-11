@@ -14,6 +14,15 @@ class Api::RequestsController < ApplicationController
 		end
 	end
 
+	def show
+		@request = Request.find(params[:id])
+		if @request
+			render :show
+		else
+			render json: ['not found'], status: 404
+		end
+	end
+
 	def update
 		@request = Request.find(params[:id])
 		if @request && @request.update_attributes(request_params)

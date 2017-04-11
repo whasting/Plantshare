@@ -154,18 +154,14 @@ const styles = StyleSheet.create({
   },
   demoButton: {
     marginTop: 30,
-    borderBottomWidth: 3,
-    borderBottomColor: 'black',
-    borderRightWidth: 3,
-    borderRightColor: 'black'
+    borderWidth: 1.5,
+    borderColor: 'black'
   },
   buttonBorder: {
     flex: 1,
     marginRight: 4,
-    borderBottomWidth: 3,
-    borderBottomColor: 'black',
-    borderRightWidth: 3,
-    borderRightColor: 'black'
+    borderWidth: 1.5,
+    borderColor: 'black'
   }
 });
 
