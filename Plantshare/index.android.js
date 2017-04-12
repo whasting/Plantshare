@@ -94,7 +94,7 @@ class DetailScreen extends React.Component {
 class PlantFormScreen extends React.Component {
   render() {
     return (
-      <View style={styles.navbar}>
+      <View style={{flex: 1}}>
         <PlantFormContainer store={store} navigation={this.props.navigation}/>
       </View>
     );
@@ -155,7 +155,20 @@ const AppNavigator = StackNavigator({
       }
     }
   },
-  Form: { screen: PlantFormScreen },
+  Form: { screen: PlantFormScreen,
+    navigationOptions: {
+      title: 'Plantshare',
+      header: {
+        style: {
+          backgroundColor: '#2E7D32'
+        },
+        titleStyle: {
+          color: 'white',
+          alignSelf: 'center'
+        }
+      }
+    }
+  },
   RequestForm: {
     screen: RequestFormScreen,
     navigationOptions: {
