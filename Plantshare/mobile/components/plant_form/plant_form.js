@@ -65,31 +65,83 @@ class PlantForm extends React.Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.container}>
+        <Text style={styles.labelPlant}>Type of Plant</Text>
 				<TextInput
-          placeholder="Type of Plant"
 					onChangeText={(title) => this.setState({ title })}
         	value={this.state.title}
+          style={styles.typePlant}
 				/>
+        <Text style={styles.labelInput}>Brief description</Text>
 				<TextInput
-          placeholder="Brief description"
 					onChangeText={(description) => this.setState({ description })}
         	value={this.state.description}
           multiline = {true}
           numberOfLines = {4}
+          style={styles.inputBox}
 				/>
+        <Text style={styles.labelInput}>Instructions</Text>
 				<TextInput
-          placeholder="Instructions"
 					onChangeText={(instructions) => this.setState({ instructions })}
         	value={this.state.instructions}
           multiline = {true}
           numberOfLines = {4}
+          style={styles.inputBox}
 				/>
-        <Button onPress={this.handleSubmit}  title="create!"/>
+        <View style={styles.createButton}>
+          <Button
+            color="#4CAF50"
+            onPress={this.handleSubmit}
+            title="create!"/>
+        </View>
 			</View>
 
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#E8F5E9'
+  },
+  labelPlant: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginVertical: 10,
+    marginHorizontal: 20,
+  },
+  labelInput: {
+    fontSize: 18,
+    marginVertical: 5,
+    marginHorizontal: 20,
+  },
+  typePlant: {
+    backgroundColor: 'white',
+    borderColor: 'white',
+    borderWidth: 1,
+    borderRadius: 10,
+    fontSize: 20,
+    fontWeight: 'bold',
+    height: 30,
+    textAlign: 'center',
+    marginHorizontal: 20,
+    marginBottom: 10,
+    marginTop: 0,
+  },
+  inputBox: {
+    backgroundColor: 'white',
+    fontSize: 18,
+    borderColor: 'transparent',
+    borderWidth: 1,
+    borderRadius: 10,
+    marginHorizontal: 20,
+    marginVertical: 5,
+    textAlign: 'center'
+  },
+  createButton: {
+    alignSelf: 'center',
+    width: 150,
+  }
+});
 
 export default PlantForm;
