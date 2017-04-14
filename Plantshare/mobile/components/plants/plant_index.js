@@ -70,15 +70,15 @@ class PlantIndex extends React.Component {
   render(){
     let backgroundColor;
     const { navigate } = this.props.navigation;
-    // <Button
-    //   onPress={() => navigate('Form', { formType: "Create" })}
-    //   title="Create!"
-    //   />
 
     return(
       <View
         className="plant-index-container"
         style={{flex: 1}}>
+        <Button
+          onPress={() => navigate('Form', {formType: "Create"})}
+          title="Create!"
+          />
         <View
           className="plant-index-tabs"
           style={{
