@@ -4,7 +4,8 @@ import { Link, hashHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { fetchPlant,
          fetchPlants,
-         clearPlant } from '../../actions/plant_actions';
+         clearPlant,
+         updateRequest} from '../../actions/plant_actions';
 
 import PlantDetail from './plant_detail';
 
@@ -14,12 +15,19 @@ const mapStateToProps = ( { plantDetail, session }, ownProps) => {
   let plant = plantDetail;
   let currentUser = session.currentUser;
 
-  return { plant, currentUser, plantId, navigation };
+  let requests = [];
+
+  if (plant.requests){
+    requests = Object.keys(plant.requests).map((id) => plant.requests[id]);
+  }
+
+  return { plant, requests, currentUser, plantId, navigation };
 };
 
 const mapDispatchToProps = dispatch => ({
 	fetchPlant: id => dispatch(fetchPlant(id)),
-  clearPlant: plant => dispatch(clearPlant(plant))
+  clearPlant: plant => dispatch(clearPlant(plant)),
+  updateRequest: request => dispatch(updateRequest(request))
 });
 
 export default connect(

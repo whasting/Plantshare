@@ -8,11 +8,12 @@ import {
   Image,
   Navigator,
   Button,
+  Picker,
   TouchableHighlight,
   ScrollView
 } from 'react-native';
 
-
+import RequestStatusItem from '../request_status_form/request_status_item';
 
 class PlantDetail extends React.Component {
   constructor(props){
@@ -28,24 +29,27 @@ class PlantDetail extends React.Component {
   }
 
   render() {
-    const plant = this.props.plant;
+    let plant = this.props.plant;
+    let requests = this.props.requests;
+
     let form = "";
 
     let plantRequests = <View></View>;
-    // if (plant.requests) {
-    //   plantRequests = plant.requests.map(request => {
-    //
-    //     return (
-    //       <View key={request.id} style={styles.textContainer}>
-    //         <Text
-    //           style={styles.descriptionTitle}>
-    //
-    //           User: {request.user_id}
-    //         </Text>
-    //       </View>
-    //     );
-    //   });
-    // }
+
+    if (requests && this.props.currentUser.id === plant.owner_id) {
+      // let requests = Object.keys(plant.requests).map((id) => plant.requests[id]);
+
+      plantRequests = requests.map(request => {
+
+        return (
+          <RequestStatusItem
+            key={request.id}
+            request={request}
+            updateRequest={this.props.updateRequest} />
+        );
+
+      });
+    }
 
     const { navigate } = this.props.navigation;
 

@@ -71,7 +71,7 @@ class PlantIndex extends React.Component {
     let backgroundColor;
     const { navigate } = this.props.navigation;
     // <Button
-    //   onPress={() => navigate('Form')}
+    //   onPress={() => navigate('Form', { formType: "Create" })}
     //   title="Create!"
     //   />
 

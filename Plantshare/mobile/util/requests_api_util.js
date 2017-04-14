@@ -13,3 +13,19 @@ export const createRequest = (request) => {
     return r.json();
   });
 };
+
+export const updateRequest = (request) => {
+
+  return fetch(`http://10.0.2.2:3000/api/requests/${request.id}`, {
+    method: 'PATCH',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      request
+    })
+  }).then(r => {
+    return r.json();
+  });
+};
