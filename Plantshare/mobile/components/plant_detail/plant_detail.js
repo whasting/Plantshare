@@ -13,7 +13,7 @@ import {
   ScrollView
 } from 'react-native';
 
-import RequestStatusItem from '../request_status_form/request_status_item';
+import RequestStatus from '../request_status_form/request_status';
 
 class PlantDetail extends React.Component {
   constructor(props){
@@ -37,18 +37,14 @@ class PlantDetail extends React.Component {
     let plantRequests = <View></View>;
 
     if (requests && this.props.currentUser.id === plant.owner_id) {
-      // let requests = Object.keys(plant.requests).map((id) => plant.requests[id]);
 
-      plantRequests = requests.map(request => {
-
-        return (
-          <RequestStatusItem
-            key={request.id}
-            request={request}
-            updateRequest={this.props.updateRequest} />
-        );
-
-      });
+      plantRequests = (
+        <RequestStatus
+          plant={plant}
+          requests={requests}
+          updateRequest={this.props.updateRequest}
+          />
+      );
     }
 
     const { navigate } = this.props.navigation;
@@ -62,11 +58,6 @@ class PlantDetail extends React.Component {
           className="plant-index-image" />
       );
     }
-
-    // <Button
-    //    onPress={() => navigate('Index')}
-    //    title="Back to Index!"
-    //  />
 
     if(plant){
       const editButton = (
@@ -83,8 +74,17 @@ class PlantDetail extends React.Component {
           title='Request'/>
       );
 
+      let currentUserRequest = requests.find((req) => {
+        return req.user.id === this.props.currentUser.id;
+      });
 
       form = this.props.currentUser.id === plant.owner_id ? editButton : requestButton;
+
+      if(currentUserRequest){
+        form = <Text
+          style={styles.descriptionTitle}>Status: {currentUserRequest.status}</Text>;
+      }
+
     }
 
     if (Object.keys(plant).length) {

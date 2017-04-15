@@ -67,13 +67,10 @@ export const updatePlant = (plant) => dispatch => (
     })
 );
 
-export const updateRequest = (request) => dispatch => {
-  debugger;
-  return(
+export const updateRequest = (request) => dispatch => (
     APIRequestUtil.updateRequest(request)
     .then(_request => dispatch(receiveRequest(_request)))
-  );
-}
+);
 
 export const deletePlant = (plant) => dispatch => (
   APIUtil.deletePlant(plant.id)
