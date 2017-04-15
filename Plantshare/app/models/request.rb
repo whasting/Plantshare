@@ -38,7 +38,7 @@ class Request < ApplicationRecord
   def assign_pending_status
   	self.status ||= "pending"
   end
-	# 
+	#
   # def overlapping_requests
   # 	Request
   # 		.where.not(id: self.id)

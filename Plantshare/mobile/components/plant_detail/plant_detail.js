@@ -8,11 +8,12 @@ import {
   Image,
   Navigator,
   Button,
+  Picker,
   TouchableHighlight,
   ScrollView
 } from 'react-native';
 
-
+import RequestStatus from '../request_status_form/request_status';
 
 class PlantDetail extends React.Component {
   constructor(props){
@@ -28,24 +29,23 @@ class PlantDetail extends React.Component {
   }
 
   render() {
-    const plant = this.props.plant;
+    let plant = this.props.plant;
+    let requests = this.props.requests;
+
     let form = "";
 
     let plantRequests = <View></View>;
-    // if (plant.requests) {
-    //   plantRequests = plant.requests.map(request => {
-    //
-    //     return (
-    //       <View key={request.id} style={styles.textContainer}>
-    //         <Text
-    //           style={styles.descriptionTitle}>
-    //
-    //           User: {request.user_id}
-    //         </Text>
-    //       </View>
-    //     );
-    //   });
-    // }
+
+    if (requests && this.props.currentUser.id === plant.owner_id) {
+
+      plantRequests = (
+        <RequestStatus
+          plant={plant}
+          requests={requests}
+          updateRequest={this.props.updateRequest}
+          />
+      );
+    }
 
     const { navigate } = this.props.navigation;
 
@@ -58,11 +58,6 @@ class PlantDetail extends React.Component {
           className="plant-index-image" />
       );
     }
-
-    // <Button
-    //    onPress={() => navigate('Index')}
-    //    title="Back to Index!"
-    //  />
 
     if(plant){
       const editButton = (
@@ -79,8 +74,17 @@ class PlantDetail extends React.Component {
           title='Request'/>
       );
 
+      let currentUserRequest = requests.find((req) => {
+        return req.user.id === this.props.currentUser.id;
+      });
 
       form = this.props.currentUser.id === plant.owner_id ? editButton : requestButton;
+
+      if(currentUserRequest){
+        form = <Text
+          style={styles.descriptionTitle}>Status: {currentUserRequest.status}</Text>;
+      }
+
     }
 
     if (Object.keys(plant).length) {
