@@ -70,9 +70,7 @@ class PlantIndex extends React.Component {
   render(){
     let backgroundColor;
     const { navigate } = this.props.navigation;
-
-    console.log(this.props.plants);
-
+    
     return(
       <View
         className="plant-index-container"

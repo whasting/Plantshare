@@ -12,10 +12,10 @@ const PlantIndexReducer = (oldState = {}, action) => {
       return action.plants;
     case CLEAR_PLANTS:
       return action.plants;
-    // case RECEIVE_PLANT:
-    //   let newPlant = {[action.plant.id]: action.plant};
-    //   return merge({}, oldState, newPlant);
-
+    case RECEIVE_PLANT:
+      // updates a plant within the plants section of state
+      let newPlant = {[action.plant.id]: action.plant};
+      return merge({}, oldState, newPlant);
     default:
       return oldState;
   }
