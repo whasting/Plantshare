@@ -65,12 +65,15 @@ class SessionForm extends React.Component {
             'Failed Request',
             'Invalid Username or Password',
             [
-              {text: 'OK', onPress: () => { this.props.removeErrors(), this.setState({loading: false })}},
+              {text: 'OK', onPress: () => {
+                this.props.removeErrors();
+                this.setState({loading: false });
+              }}
             ]
           )
       );
     } else {
-      return <Text></Text>
+      return <Text></Text>;
     }
   }
 
@@ -80,6 +83,8 @@ class SessionForm extends React.Component {
         <View>
           <ActivityIndicator
             style={[styles.centering]}
+            color='white'
+            size='large'
           />
         </View>
       );
@@ -136,7 +141,6 @@ class SessionForm extends React.Component {
 		return (
 			<View style={{flex: 1}}>
         { this.showErrors() }
-        { this.showLoading() }
 
 				<TextInput
           placeholder="Username"
@@ -172,6 +176,7 @@ class SessionForm extends React.Component {
             title="Demo"
             color='#4CAF50'/>
         </View>
+        { this.showLoading() }
 			</View>
 		);
 	}
