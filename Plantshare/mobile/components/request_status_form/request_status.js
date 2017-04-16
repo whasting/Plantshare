@@ -26,7 +26,7 @@ class RequestStatus extends React.Component {
 
           return (
             <RequestStatusItem
-              key={idx}
+              key={request}
               request={request}
               updateRequest={this.props.updateRequest} />
           );

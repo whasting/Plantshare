@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router';
 
 import {
   AppRegistry,
+  ActivityIndicator,
   StyleSheet,
   Text,
 	TextInput,
@@ -10,16 +11,19 @@ import {
   Navigator,
   Button,
   TouchableHighlight,
-	AsyncStorage
+	AsyncStorage,
+  Alert
 } from 'react-native';
 
 class SessionForm extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { username: "", password: "" };
+		this.state = { username: "", password: "", loading: false };
 		this.handleLogin = this.handleLogin.bind(this);
 		this.handleSignup = this.handleSignup.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
+    this.showErrors = this.showErrors.bind(this);
+    this.showLoading = this.showLoading.bind(this);
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -45,13 +49,44 @@ class SessionForm extends React.Component {
 		e.preventDefault();
 		const user = this.state;
 		this.props.login(user);
+    this.setState({loading: true });
 	}
 
 	handleSignup(e) {
 		e.preventDefault();
 		const user = this.state;
 		this.props.signup(user);
+    this.setState({loading: true });
 	}
+
+  showErrors(){
+    if (this.props.errors.length !== 0){
+      return ( Alert.alert(
+            'Failed Request',
+            'Invalid Username or Password',
+            [
+              {text: 'OK', onPress: () => { this.props.removeErrors(), this.setState({loading: false })}},
+            ]
+          )
+      );
+    } else {
+      return <Text></Text>
+    }
+  }
+
+  showLoading(){
+    if(this.state.loading){
+      return (
+        <View>
+          <ActivityIndicator
+            style={[styles.centering]}
+          />
+        </View>
+      );
+    } else {
+      return (<View></View>);
+    }
+  }
 
 	navLink() {
 		if (this.props.formType === "login") {
@@ -84,7 +119,10 @@ class SessionForm extends React.Component {
 
           if (demoPassword.length === i) {
             const user = this.state;
-            setTimeout(() => this.props.login(user), 120);
+            setTimeout(() => {
+              this.props.login(user);
+              this.setState({loading: true });
+            }, 120);
             clearInterval(passFill);
           }
         }, 50);
@@ -94,8 +132,12 @@ class SessionForm extends React.Component {
 
 	render() {
     const { navigate } = this.props.navigation;
+
 		return (
 			<View style={{flex: 1}}>
+        { this.showErrors() }
+        { this.showLoading() }
+
 				<TextInput
           placeholder="Username"
           style={styles.textFields}
@@ -103,7 +145,6 @@ class SessionForm extends React.Component {
 					onChangeText={(username) => this.setState({ username })}
         	value={this.state.username}
 				/>
-        <Text></Text>
 				<TextInput
           placeholder="Password"
           style={styles.textFields}
@@ -162,7 +203,20 @@ const styles = StyleSheet.create({
     marginRight: 4,
     borderWidth: 1.5,
     borderColor: 'black'
-  }
+  },
+  centering: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 8,
+  },
+  gray: {
+    backgroundColor: '#cccccc',
+  },
+  horizontal: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: 8,
+  },
 });
 
 export default SessionForm;
