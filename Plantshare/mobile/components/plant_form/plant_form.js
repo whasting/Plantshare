@@ -136,7 +136,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginHorizontal: 20,
     marginVertical: 5,
-    textAlign: 'center'
+    textAlign: 'left',
+    alignItems: 'flex-start'
   },
   createButton: {
     alignSelf: 'center',

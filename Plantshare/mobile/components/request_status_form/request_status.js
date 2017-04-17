@@ -20,13 +20,13 @@ class RequestStatus extends React.Component {
   }
 
   render(){
-
+    console.log(this.props.requests);
     return(
       <View>{ this.props.requests.map((request, idx) => {
 
           return (
             <RequestStatusItem
-              key={request}
+              key={request.id}
               request={request}
               updateRequest={this.props.updateRequest} />
           );
