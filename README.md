@@ -1,14 +1,19 @@
 # Plantshare
 
-[Live][heroku]
+<p align="center">
+  <a href="https://colinritchey.github.io/PlantShareDemo/">
+    ![splash-page](docs/images/Splash-page-icon.png)
+  </a>
+</p>
 
-[github]:(https://github.com/whasting/Plantshare)
+[Live link](https://colinritchey.github.io/PlantShareDemo/)
+
+[Github link](https://github.com/whasting/Plantshare)
 
 PlantShare is a mobile plant/produce distribution app that allows users
-to post and request plants from local users. The dashboard keeps track of
+to post and request plants from other users. The dashboard keeps track of
 current listings, a user's own listings and their requests. Owners of the
 plant can approve or deny requests.
-
 
 
 ## Design Docs
@@ -26,19 +31,38 @@ plant can approve or deny requests.
 
 ## Technologies & Technical Challenges
 
-Plantshare will be using Rails on the backend and React Native on the frontend.
+Plantshare uses Rails on the backend and React Native on the frontend with a full Redux cycle. Two of the more challenging obstacles faced in developing the mobile app are
 
-(Coming Soon) Additionally, the site will be using a combination of Google Maps Api to display the location of a plant detail item and Cloudinary image storage Api to allow users to upload images of their plants.
+* Challenge 1
+* Challenge 2
 
-## images
+```javascript
+class App extends React.Component {
+  render() {
+    return (
+      <AppNavigator style={styles.navbar} />
+    );
+  }
+}
+```
 
-![splash-page](docs/images/Splash-page.png)
+## Screenshots
 
-![dashboard](docs/images/dashboard.png)
+<p align="center">
+![splash-page](docs/images/Splash-page_s40.png)
+</p>
 
-![detail-owned](docs/images/detail-owned.png)
+<p align="center">
+![dashboard](docs/images/dashboard_s40.png)
+</p>
 
-![detail-not-owned](docs/images/detail-not-owned.png)
+<p align="center">
+![detail-owned](docs/images/detail-owned_s40.png)
+</p>
+
+<p align="center">
+![detail-not-owned](docs/images/detail-not-owned_s40.png)
+</p>
 
 ## Group Members
 
@@ -49,6 +73,8 @@ Plantshare will be using Rails on the backend and React Native on the frontend.
 #### [Wade Hastings](https://github.com/whasting)
 
 ## Upcoming Features:
+
+(Coming Soon) Additionally, the site will be using a combination of Google Maps Api to display the location of a plant detail item and Cloudinary image storage Api to allow users to upload images of their plants.
 
   - [ ] Image uploading
   - [ ] Google maps, be able to post where you are distributing your plants
