@@ -4,7 +4,7 @@ import { fetchPlants, clearPlants } from '../../actions/plant_actions';
 import PlantIndex from './plant_index';
 
 const mapStateToProps = ({plantIndex, session}, ownProps) => {
-  let plants = Object.keys(plantIndex).map((id) => plantIndex[id]);
+  let plants = Object.keys(plantIndex).map((id) => plantIndex[id]).reverse();
   let navigation = ownProps.navigation;
   let currentUserId = session.currentUser.id;
   return { plants, navigation, currentUserId };

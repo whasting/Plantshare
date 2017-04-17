@@ -20,12 +20,12 @@ class PlantDetail extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchPlant(this.props.plantId);
   }
 
   componentWillUnmount() {
-    this.props.clearPlant({});
+    this.props.clearPlant(null);
   }
 
   render() {

@@ -7,6 +7,7 @@ export const RECEIVE_REQUEST = "RECEIVE_REQUEST";
 export const REMOVE_PLANT = "REMOVE_PLANT";
 export const CLEAR_PLANT = "CLEAR_PLANT";
 export const CLEAR_PLANTS = "CLEAR_PLANTS";
+export const RECEIVE_IMAGES = "RECEIVE_IMAGES";
 
 import { hashHistory } from 'react-router';
 
@@ -38,6 +39,11 @@ export const clearPlant = plant => ({
 export const clearPlants = plants => ({
   type: CLEAR_PLANTS,
   plants
+});
+
+export const receiveImages = images => ({
+  type: RECEIVE_IMAGES,
+  images
 });
 
 export const fetchPlants = (data, tabNum) => dispatch => (
@@ -77,5 +83,12 @@ export const deletePlant = (plant) => dispatch => (
     .then(_plant => {
       dispatch(removePlant(_plant));
       hashHistory.push('/');
+    })
+);
+
+export const fetchImages = query => dispatch => (
+  APIUtil.fetchImages(query)
+    .then(images => {
+      dispatch(receiveImages(images));
     })
 );

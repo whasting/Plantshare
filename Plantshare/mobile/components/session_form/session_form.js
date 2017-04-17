@@ -189,7 +189,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'black',
     borderRadius: 10,
-    fontSize: 16
+    fontSize: 16,
+    paddingLeft: 10
   },
   loginSignup: {
     flex: 0,

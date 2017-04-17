@@ -3,7 +3,8 @@ import { merge } from 'lodash';
 import {
     RECEIVE_PLANT,
     RECEIVE_REQUEST,
-    CLEAR_PLANT
+    CLEAR_PLANT,
+    RECEIVE_IMAGES
   } from '../actions/plant_actions';
 
 const defaultPlant = {
@@ -12,6 +13,7 @@ const defaultPlant = {
 
 const PlantDetailReducer = (state = defaultPlant, action) => {
   Object.freeze(state);
+  let newState;
   switch (action.type) {
     case RECEIVE_PLANT:
       return merge({}, defaultPlant, action.plant);
@@ -24,7 +26,11 @@ const PlantDetailReducer = (state = defaultPlant, action) => {
 
       return merge({}, plant);
     case CLEAR_PLANT:
-      return action.plant;
+      return merge({}, defaultPlant, action.plant);
+    case RECEIVE_IMAGES:
+      newState = merge({}, state);
+      newState['images'] = action.images.photos.photo;
+      return newState;
     default:
       return state;
   }
