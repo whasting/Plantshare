@@ -30,9 +30,9 @@ Plantshare will be using Rails on the backend and React Native on the frontend.
 
 (Coming Soon) Additionally, the site will be using a combination of Google Maps Api to display the location of a plant detail item and Cloudinary image storage Api to allow users to upload images of their plants.
 
-## images
+## Images
 
-![splash-page](docs/images/Splash-page.png)
+![splash-page](docs/images/Splash-page.png | width=200)
 
 ![dashboard](docs/images/dashboard.png)
 
