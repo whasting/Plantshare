@@ -51,7 +51,8 @@ class PlantForm extends React.Component {
 
   searchFlickr() {
     if (this.state.title !== "" && this.state.title !== this.state.query) {
-      this.props.fetchImages(this.state.title)
+      let query = this.state.title.split(" ").join();
+      this.props.fetchImages(query)
         .then(() => this.renderImageUrl())
         .then(imgUrl => this.setState({img_url: imgUrl}))
         .then(() => this.setState({query: this.state.title}));
