@@ -32,7 +32,7 @@ Plantshare will be using Rails on the backend and React Native on the frontend.
 
 ## Images
 
-![splash-page](docs/images/Splash-page.png | width=200)
+![splash-page](docs/images/Splash-page.png)
 
 ![dashboard](docs/images/dashboard.png)
 
