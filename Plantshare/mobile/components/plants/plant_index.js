@@ -12,7 +12,8 @@ import {
   ScrollView,
   Navigator,
   Button,
-  TouchableHighlight
+  TouchableHighlight,
+  TouchableOpacity
 } from 'react-native';
 
 import PlantIndexItem from './plant_index_item';
@@ -70,15 +71,17 @@ class PlantIndex extends React.Component {
   render(){
     let backgroundColor;
     const { navigate } = this.props.navigation;
-    
+
     return(
       <View
         className="plant-index-container"
         style={{flex: 1}}>
-        <Button
-          onPress={() => navigate('Form', {formType: "Create"})}
-          title="Create!"
-          />
+        <View>
+          <Button
+            onPress={() => navigate('Form', {formType: "Create"})}
+            title="Create Listing"
+            />
+        </View>
         <View
           className="plant-index-tabs"
           style={{

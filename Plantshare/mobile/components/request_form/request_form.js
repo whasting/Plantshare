@@ -84,7 +84,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     margin: 20,
-    textAlign: 'center'
+    textAlign: 'left',
+    textAlignVertical: 'top',
   },
   submitButton: {
     width: 150,

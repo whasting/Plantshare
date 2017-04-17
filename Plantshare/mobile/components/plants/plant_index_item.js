@@ -13,6 +13,18 @@ class PlantIndexItem extends React.Component {
     super(props);
 
     this.backgroundColor = this.props.backgroundColor;
+    this.renderRequests = this.renderRequests.bind(this);
+  }
+
+  renderRequests() {
+    let plant = this.props.plant;
+    if (plant.request_ids) {
+      return (
+        <Text style={styles.index_item_text}>
+          {plant.request_ids.length} requests
+        </Text>
+      );
+    }
   }
 
   render() {
@@ -43,9 +55,7 @@ class PlantIndexItem extends React.Component {
               {plant.title}
             </Text>
             {user}
-            <Text style={styles.index_item_text}>
-              {plant.request_ids.length} requests
-            </Text>
+            {this.renderRequests()}
           </View>
           <Image
             style={styles.plant_image}

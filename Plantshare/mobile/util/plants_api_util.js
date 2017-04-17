@@ -72,6 +72,14 @@ export const updatePlant = (_plant) => {
   });
 };
 
+export const fetchImages = query => {
+  return fetch(
+    `https://api.flickr.com/services/rest/?method=flickr.photos.search&sort=relevance&safe_search=1&api_key=cf72b437418db88cbab6586b2775aa9e&format=json&nojsoncallback=1&per_page=15&text=${query}`)
+    .then(images => {
+      return images.json();
+    });
+};
+
 export const deletePlant = id => (
   $.ajax({
     url: `api/plants/${id}`,

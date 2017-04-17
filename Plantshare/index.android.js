@@ -121,8 +121,10 @@ const AppNavigator = StackNavigator({
           height: 0
         },
         titleStyle: {
-          color: 'white',
-          alignSelf: 'center'
+          color: 'white'
+        },
+        navigationBarStyle: {
+          tintColor: 'white'
         }
       }
     }
@@ -135,8 +137,10 @@ const AppNavigator = StackNavigator({
           backgroundColor: '#2E7D32'
         },
         titleStyle: {
-          color: 'white',
-          alignSelf: 'center'
+          color: 'white'
+        },
+        navigationBarStyle: {
+          tintColor: 'white'
         }
       }
     }
@@ -149,8 +153,10 @@ const AppNavigator = StackNavigator({
           backgroundColor: '#2E7D32'
         },
         titleStyle: {
-          color: 'white',
-          alignSelf: 'center'
+          color: 'white'
+        },
+        navigationBarStyle: {
+          tintColor: 'white'
         }
       }
     }
@@ -163,8 +169,10 @@ const AppNavigator = StackNavigator({
           backgroundColor: '#2E7D32'
         },
         titleStyle: {
-          color: 'white',
-          alignSelf: 'center'
+          color: 'white'
+        },
+        navigationBarStyle: {
+          tintColor: 'white'
         }
       }
     }
@@ -178,8 +186,10 @@ const AppNavigator = StackNavigator({
           backgroundColor: '#2E7D32'
         },
         titleStyle: {
-          color: 'white',
-          alignSelf: 'center'
+          color: 'white'
+        },
+        navigationBarStyle: {
+          tintColor: 'white'
         }
       }
     }
@@ -192,8 +202,10 @@ const AppNavigator = StackNavigator({
           backgroundColor: '#2E7D32'
         },
         titleStyle: {
-          color: 'white',
-          alignSelf: 'center'
+          color: 'white'
+        },
+        navigationBarStyle: {
+          tintColor: 'white'
         }
       }
     }

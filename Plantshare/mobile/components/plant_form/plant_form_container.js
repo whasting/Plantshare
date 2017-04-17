@@ -4,7 +4,8 @@ import { Link, hashHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { fetchPlant,
         createPlant,
-        updatePlant } from '../../actions/plant_actions';
+        updatePlant,
+        fetchImages } from '../../actions/plant_actions';
 
 import PlantForm from './plant_form';
 
@@ -13,7 +14,6 @@ const mapStateToProps = ({session, plantDetail}, ownProps) => {
   let formType = navigation.state.params.formType === "Update" ? "Update" : "Create";
   let plant = plantDetail;
   let currentUser = session.currentUser;
-
 
   return {
     formType,
@@ -25,7 +25,8 @@ const mapStateToProps = ({session, plantDetail}, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
 	createPlant: plant => dispatch(createPlant(plant)),
-	updatePlant: plant => dispatch(updatePlant(plant))
+	updatePlant: plant => dispatch(updatePlant(plant)),
+  fetchImages: query => dispatch(fetchImages(query))
 });
 
 export default connect(
