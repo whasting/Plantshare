@@ -1,8 +1,8 @@
 # Plantshare
 
-[Live][heroku]
+[Live][demo]
 
-[github]:(https://github.com/whasting/Plantshare)
+[demo]:https://colinritchey.github.io/PlantShareDemo/
 
 PlantShare is a mobile plant/produce distribution app that allows users
 to post and request plants from local users. The dashboard keeps track of
